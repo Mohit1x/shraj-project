@@ -9,6 +9,7 @@ import { SetStateAction, useEffect, useState } from "react";
 export default function ProductsPage() {
   const [impCategories, setImpcategories] = useState<string[] | undefined>();
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
   const allCategories = () => {
     const categ: SetStateAction<undefined> | string[] = [];
@@ -37,14 +38,12 @@ export default function ProductsPage() {
     ? products.filter((product) => selectedTypes.includes(product.type))
     : products;
 
-  const brands = ["Henny Penny", "Taylor", "Franke", "Lightfry"];
-
   return (
-    <div className="min-h-screen bg-white py-10 max-w-7xl w-full mx-auto px-4 md:px-0">
+    <div className="min-h-screen bg-white py-10 max-w-7xl w-full mx-auto px-4 md:px-10 xl:px-0">
       <h1 className="text-3xl font-bold mb-4">All Products</h1>
       <div className="flex flex-col lg:flex-row gap-8">
         {/* Sidebar Filter */}
-        <div className="w-full lg:w-64 border-r pr-4">
+        <div className="w-full hidden md:block lg:w-64 border-r pr-4">
           <div>
             <h2 className="font-semibold text-lg mb-2">Equipment Type</h2>
             {impCategories?.map((type, index) => (
@@ -62,6 +61,33 @@ export default function ProductsPage() {
             ))}
           </div>
         </div>
+        {/* mobile filter */}
+        <button
+          className="bg-[#2E2F91] px4 py-2 block md:hidden text-white font-semibold rounded"
+          onClick={() => setIsMobileFilterOpen(!isMobileFilterOpen)}
+        >
+          Filter
+        </button>
+        {isMobileFilterOpen && (
+          <div className="w-full block md:hidden lg:w-64 border-r pr-4">
+            <div>
+              <h2 className="font-semibold text-lg mb-2">Equipment Type</h2>
+              {impCategories?.map((type, index) => (
+                <div key={index} className="flex items-center mb-2">
+                  <input
+                    type="checkbox"
+                    id={type}
+                    value={type}
+                    onChange={handleSelectedBrand}
+                    checked={selectedTypes.includes(type)}
+                    className="mr-2"
+                  />
+                  <label htmlFor={type}>{type}</label>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Product Grid */}
         <ScrollArea className="h-screen">
