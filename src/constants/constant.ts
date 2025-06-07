@@ -191,6 +191,12 @@ const MRSOtherFeatures = {
   },
 };
 
+export const heroProductImages = [
+  "/IO1.png",
+  "/auto-1-1.png",
+  "/MRS-pictures/MRS1.png",
+];
+
 export const products = [
   {
     id: 1,
