@@ -46,6 +46,7 @@
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.5.2",
     "react-icons": "^5.5.0",
+    "react-parallax-tilt": "^1.7.297",
     "react-tooltip": "^5.28.1",
     "react-use-measure": "^2.1.7",
     "swiper": "^11.2.7",

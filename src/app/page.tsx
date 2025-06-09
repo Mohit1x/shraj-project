@@ -2,17 +2,16 @@
 
 import HeroComponent from "@/components/HeroComponent";
 import Products from "@/components/Products";
-import { featuresData } from "@/constants/constant";
 import { useRef } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { Autoplay } from "swiper/modules";
 import ImageSlider from "@/components/ImageSlider";
 import Link from "next/link";
 import FeaturesSection from "@/components/FeaturedSection";
+import HomeProductSections from "@/components/HomeProductSections";
+import { homeCategorySectionData } from "@/constants/constant";
 
 export default function Home() {
   const productsRef = useRef<HTMLDivElement>(null);
@@ -23,7 +22,14 @@ export default function Home() {
       <div className="flex flex-col gap-10">
         <FeaturesSection />
 
-        <div className="w-full max-w-7xl flex flex-col mx-auto mb-10 PX-4">
+        <div className="w-full max-w-7xl flex flex-col mx-auto my-10 PX-4 gap-20">
+        <div className="flex flex-col gap-10">
+            {
+            homeCategorySectionData.map((data)=>(
+              <HomeProductSections key={data.title} title={data.title} desc={data.des} img={data.img}/>
+            ))
+          }
+        </div>
           <div className="flex items-center justify-between px-2 lg:px-0">
             <h1 className="text-lg md:text-2xl lg:text-4xl font-semibold">
               Some Of Our Products
