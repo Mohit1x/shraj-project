@@ -17,7 +17,7 @@ export default function HeroComponent({ prodRef }: HeroComponentRef) {
           <div className="space-y-4">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
               Explore Premium{" "}
-              <span className="text-blue-600">Scientific Equipment</span>
+              <span className="text-[#2E2F91]">Scientific Equipment</span>
             </h1>
             <div className="w-16 h-1 bg-blue-600 rounded-full"></div>
           </div>
@@ -29,7 +29,7 @@ export default function HeroComponent({ prodRef }: HeroComponentRef) {
 
           <div className="flex flex-col sm:flex-row gap-4 items-start">
             <button
-              className="flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg"
+              className="flex items-center gap-3 bg-[#2E2F91] hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg"
               onClick={() =>
                 prodRef.current?.scrollIntoView({ behavior: "smooth" })
               }
@@ -48,30 +48,36 @@ export default function HeroComponent({ prodRef }: HeroComponentRef) {
         <div className="relative">
           <div className="grid grid-cols-2 gap-6 max-w-lg ml-auto">
             {/* Top Left - Large Image */}
-            <div className="col-span-2 relative">
-              <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
+            <div className="col-span-2 relative group">
+              <div className="bg-[#2E2F91] rounded-3xl p-8 shadow-lg group-hover:bg-white hover:shadow-xl hover:scale-[1.05] transition-all duration-500 relative overflow-hidden cursor-pointer h-64">
                 <img
                   src={
-                    heroProductImages[0] ||
+                    heroProductImages[0].img ||
                     `/placeholder.svg?height=200&width=300`
                   }
-                  alt={heroProductImages[0] || "Scientific equipment"}
+                  alt={heroProductImages[0].img || "Scientific equipment"}
                   className="w-full h-48 object-contain"
                 />
+
                 {/* Decorative dot */}
                 <div className="absolute top-4 right-4 w-3 h-3 bg-blue-600 rounded-full"></div>
+
+                {/* Text from bottom to center on hover */}
+                <h1 className="absolute left-1/2 top-1/2 transform -translate-x-1/2 translate-y-[150px] group-hover:translate-y-[0%] text-gray-100 bg-[#2E2F91] w-fit p-2 rounded transition-all duration-500 text-lg font-semibold text-center">
+                  Industrial Ovens
+                </h1>
               </div>
             </div>
 
             {/* Bottom Left */}
-            <div className="relative">
-              <div className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
+            <div className="relative group">
+              <div className="bg-[#2E2F91] rounded-3xl p-6 group-hover:bg-[#2E2F91] shadow-lg hover:shadow-xl hover:scale-[1.05] transition duration-500 relative overflow-hidden cursor-pointer">
                 <img
                   src={
-                    heroProductImages[1] ||
+                    heroProductImages[1].img ||
                     `/placeholder.svg?height=150&width=150`
                   }
-                  alt={heroProductImages[1] || "Scientific equipment"}
+                  alt={heroProductImages[1].img || "Scientific equipment"}
                   className="w-full h-32 object-contain"
                 />
                 {/* Decorative elements */}
@@ -82,14 +88,14 @@ export default function HeroComponent({ prodRef }: HeroComponentRef) {
             </div>
 
             {/* Bottom Right */}
-            <div className="relative">
-              <div className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
+            <div className="relative group">
+              <div className="bg-[#2E2F91] rounded-3xl group-hover:bg-[#2E2F91] p-6 shadow-lg hover:shadow-xl hover:scale-[1.05] transition duration-500 relative overflow-hidden cursor-pointer">
                 <img
                   src={
-                    heroProductImages[2] ||
+                    heroProductImages[2].img ||
                     `/placeholder.svg?height=150&width=150`
                   }
-                  alt={heroProductImages[2] || "Scientific equipment"}
+                  alt={heroProductImages[2].img || "Scientific equipment"}
                   className="w-full h-32 object-contain"
                 />
                 {/* Decorative dot */}

@@ -192,9 +192,9 @@ const MRSOtherFeatures = {
 };
 
 export const heroProductImages = [
-  "/IO1.png",
-  "/auto-1-1.png",
-  "/MRS-pictures/MRS1.png",
+  { img: "/IO1.png", id: 1 },
+  { img: "/auto-1-1.png", id: 11 },
+  { img: "/MRS-pictures/MRS1.png", id: 16 },
 ];
 
 export const products = [
@@ -834,7 +834,7 @@ export const homeCategorySectionData = [
     title: "Industrial Oven",
     des: "At Shraj Industries Pvt Ltd., we lead  the way in industrial heating  innovation. With 7 years of experience in oven manufacturing, our expertise has powered hundreds of successful operations across various industries.",
   },
-    {
+  {
     img: "/MRS-pictures/MRS1.png",
     title: "MORTUARY REFRIGERATION SYSTEMS",
     des: "A mortuary refrigeration system is designed to preserve human remains by maintaining low temperatures to slow down decomposition. These systems are essential for hospitals, forensic labs, and funeral homes, offering hygienic, efficient, and reliable storage solutions.",
@@ -843,5 +843,45 @@ export const homeCategorySectionData = [
     img: "/auto-1-2.png",
     title: " STERILIZERS",
     des: "Shraj Industries Pvt. Ltd. offers Vertical Autoclave units with chamber volumes ranging from 22 liters to 175 liters, accommodating two and three drums accordingly.",
+  },
+];
+
+export const HomeOvens = [
+  { id: 2, img: "/IO2.png", title: "Conveyor Ovens" },
+  { id: 3, img: "/IO3.png", title: "Cabinet Ovens" },
+  { id: 4, img: "/IO4.png", title: "Walk-In Ovens" },
+];
+export const HomeMortuary = [
+  {
+    id: 19,
+    img: "/MRS-pictures/MRS4-1.png",
+    title: "MODEL SIPL-03/2 THREE BODY REFRIGERATOR",
+  },
+  {
+    id: 20,
+    img: "/MRS-pictures/MRS5-1.png",
+    title: "ROLL-IN TWO BODY REFRIGERATOR",
+  },
+  {
+    id: 21,
+    img: "/MRS-pictures/MRS6.png",
+    title: "TWO OR THREE BODY REFRIGERATOR",
+  },
+];
+export const HomeSterilizers = [
+  {
+    id: 11,
+    img: "/auto-1-1.png",
+    title: "VERTICAL AUTOCLAVE RADIAL AND KNOB LOCKING",
+  },
+  {
+    id: 12,
+    img: "/auto-2.png",
+    title: "HORIZONTAL CYLINDRICLE HIGH PRESSURE AUTOCLAVE",
+  },
+  {
+    id: 13,
+    img: "/auto-3.png",
+    title: "HORIZONTAL RECTANGULAR HIGH PRESSURE AUTOCLAVE",
   },
 ];

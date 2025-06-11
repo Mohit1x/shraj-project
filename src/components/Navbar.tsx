@@ -7,6 +7,7 @@ import MobileSidebar from "./MobileSidebar";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { Button } from "./ui/button";
 
 export default function Navbar() {
   const [openMobileSidebar, setOpenMobileSidebar] = useState(false);
@@ -47,9 +48,7 @@ export default function Navbar() {
             </div>
           </div>
           <Link href={"/contact"}>
-            <button className="border bg-[#2E2F91] hidden md:block hover:bg-blue-600 transition duration-300 py-1 px-3 md:py-2 md:px-5 rounded-full text-white font-semibold cursor-pointer">
-              Contact Us
-            </button>
+            <Button variant={"hero"}>Contact Us</Button>
           </Link>
           <div
             className="block md:hidden"
