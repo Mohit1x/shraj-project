@@ -13,10 +13,10 @@ export default function HomeProductSections({
 }: TitleCardProps) {
   return (
     <div
-      className={`w-full flex gap-10 items-center justify-between ${
+      className={`w-full flex gap-10 items-center justify-between flex-col md:flex-row ${
         title === "MORTUARY REFRIGERATION SYSTEMS"
-          ? "flex-row-reverse"
-          : "flex-row"
+          ? "md:flex-row-reverse"
+          : "md:flex-row"
       }`}
     >
       <div className="flex flex-col gap-5 max-w-xl">
@@ -27,7 +27,7 @@ export default function HomeProductSections({
         </span>
       </div>
 
-      <div className="w-[400px]">
+      <div className="w-[200px] md:w-[400px]">
         <TiltCard img={img} />
       </div>
     </div>

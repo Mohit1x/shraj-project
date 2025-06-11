@@ -60,7 +60,7 @@ export default function HeroComponent({ prodRef }: HeroComponentRef) {
                 />
 
                 {/* Decorative dot */}
-                <div className="absolute top-4 right-4 w-3 h-3 bg-blue-600 rounded-full"></div>
+                <div className="absolute top-4 right-4 w-2 h-2 md:w-3 md:h-3 bg-blue-600 rounded-full"></div>
 
                 {/* Text from bottom to center on hover */}
                 <h1 className="absolute left-1/2 top-1/2 transform -translate-x-1/2 translate-y-[150px] group-hover:translate-y-[0%] text-gray-100 bg-[#2E2F91] w-fit p-2 rounded transition-all duration-500 text-lg font-semibold text-center">
@@ -105,7 +105,7 @@ export default function HeroComponent({ prodRef }: HeroComponentRef) {
           </div>
 
           {/* Background decorative elements */}
-          <div className="absolute -top-8 -right-8 w-20 h-20 bg-blue-100 rounded-full opacity-50"></div>
+          <div className="absolute -top-8 -right-8 hidden md:block md:w-20 md:h-20 bg-blue-100 rounded-full opacity-50"></div>
           <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-pink-100 rounded-full opacity-50"></div>
         </div>
       </div>

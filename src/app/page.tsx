@@ -19,7 +19,7 @@ export default function Home() {
 
       <div className="flex flex-col gap-10">
         <FeaturesSection />
-        <div className="w-full max-w-7xl flex flex-col mx-auto my-10 PX-4 gap-20">
+        <div className="w-full max-w-7xl flex flex-col mx-auto my-10 px-4 2xl:px-0 gap-20">
           <div className="flex flex-col gap-10">
             {homeCategorySectionData.map((data) => (
               <HomeProductSections
