@@ -15,22 +15,16 @@ export default function Home() {
   const productsRef = useRef<HTMLDivElement>(null);
   return (
     <div className="bg-gray-100">
-      <HeroComponent prodRef={productsRef} />
+      <div className="w-full max-w-7xl flex flex-col mx-auto my-10 px-4 2xl:px-0 gap-20">
+        <section className="w-full px-4 md:px-10 py-10">
+          <HomeProductSections sections={homeCategorySectionData} />
+        </section>
+      </div>
+      {/* <HeroComponent prodRef={productsRef} /> */}
 
       <div className="flex flex-col gap-10">
         <FeaturesSection />
-        <div className="w-full max-w-7xl flex flex-col mx-auto my-10 px-4 2xl:px-0 gap-20">
-          <div className="flex flex-col gap-10">
-            {homeCategorySectionData.map((data) => (
-              <HomeProductSections
-                key={data.title}
-                title={data.title}
-                desc={data.des}
-                img={data.img}
-              />
-            ))}
-          </div>
-        </div>
+
         <div className="bg-white py-12 sm:py-16 mb-20">
           <div
             className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8"

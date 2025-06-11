@@ -49,7 +49,7 @@
     "react-parallax-tilt": "^1.7.297",
     "react-tooltip": "^5.28.1",
     "react-use-measure": "^2.1.7",
-    "swiper": "^11.2.7",
+    "swiper": "^11.2.8",
     "tailwind-merge": "^3.3.0",
     "tiptap": "^1.32.2",
     "yup": "^1.6.1"
