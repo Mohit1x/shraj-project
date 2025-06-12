@@ -828,23 +828,7 @@ export const carouselData = [
   "/carousel5.png",
 ];
 
-export const homeCategorySectionData = [
-  {
-    img: "/IO2.png",
-    title: "Industrial Oven",
-    des: "At Shraj Industries Pvt Ltd., we lead  the way in industrial heating  innovation. With 7 years of experience in oven manufacturing, our expertise has powered hundreds of successful operations across various industries.",
-  },
-  {
-    img: "/MRS-pictures/MRS1.png",
-    title: "MORTUARY REFRIGERATION SYSTEMS",
-    des: "A mortuary refrigeration system is designed to preserve human remains by maintaining low temperatures to slow down decomposition. These systems are essential for hospitals, forensic labs, and funeral homes, offering hygienic, efficient, and reliable storage solutions.",
-  },
-  {
-    img: "/auto-1-2.png",
-    title: " STERILIZERS",
-    des: "Shraj Industries Pvt. Ltd. offers Vertical Autoclave units with chamber volumes ranging from 22 liters to 175 liters, accommodating two and three drums accordingly.",
-  },
-];
+export const banners = ["banner1.png", "banner2.png", "banner3.png"];
 
 export const HomeOvens = [
   { id: 2, img: "/IO2.png", title: "Conveyor Ovens" },
@@ -885,3 +869,4 @@ export const HomeSterilizers = [
     title: "HORIZONTAL RECTANGULAR HIGH PRESSURE AUTOCLAVE",
   },
 ];
+

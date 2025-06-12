@@ -1,14 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=League+Script&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Archivo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternatesdisplay=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 @import "tailwindcss";
-@import "tw-animate-css";
-
-@custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-nunito: "Nunito", sans-serif;
-  --font-manrope: "Manrope", sans-serif;
+  --font-cormorant-garamond: "Cormorant Garamond", serif;
+  --font-montserrat-alternates: "Montserrat Alternates", serif;
+  --font-open-sans: "Open Sans", serif;
+  --font-archivo: "Archivo", Arial;
+  --font-gotu: "Gotu", serif;
+  --font-league-script: "League Script", Arial;
+  --font-inter: "inter", Arial;
+  --font-nunito: "Nunito", "serif";
 }
 
 @theme inline {
