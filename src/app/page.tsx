@@ -12,7 +12,7 @@ import FeaturesSection from "@/components/FeaturedSection";
 export default function Home() {
   const productsRef = useRef<HTMLDivElement>(null);
   return (
-    <div className="flex flex-col gap-10 md:gap-15 xl:gap-20">
+    <div className="flex flex-col gap-16 md:gap-15 xl:gap-20">
       <div>
         <div className="w-full">
           <section className="w-full">
@@ -37,7 +37,9 @@ export default function Home() {
         </p>
       </div>
 
-      <FeaturesSection />
+      <div>
+        <FeaturesSection />
+      </div>
 
       <div className="flex flex-col">
         <div className="mb-6 sm:mb-8 text-center">
@@ -47,7 +49,7 @@ export default function Home() {
         </div>
         <div className="bg-gray-200">
           <div
-            className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8" 
+            className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8"
             ref={productsRef}
           >
             <Products />

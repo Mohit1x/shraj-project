@@ -43,7 +43,7 @@ export default function FeaturesSection() {
   }, []);
 
   return (
-    <div className="bg-[#2E2F91] py-12 px-4">
+    <div className="bg-white md:bg-[#2E2F91] py-8 md:py-12 px-4">
       <div className="max-w-7xl mx-auto">
         {isMobile ? (
           <Swiper
@@ -55,15 +55,17 @@ export default function FeaturesSection() {
             className="text-white"
           >
             {features.map((feature, index) => (
-              <SwiperSlide key={index}>
-                <div className="text-center text-white">
+              <SwiperSlide key={index} className="bg-[#F8FAFC] p-10 rounded">
+                <div className="text-center rounded-xl">
                   <div className="flex justify-center mb-4">
-                    <feature.icon size={48} className="text-[#d3686d]" />
+                    <feature.icon size={48} className={`text-[#2E2F91]`} />
                   </div>
-                  <h3 className="text-lg font-bold mb-2 tracking-wide text-[#d3686d]">
+                  <h3
+                    className={`text-[#2E2F91] font-nunito text-xl font-semibold`}
+                  >
                     {feature.title}
                   </h3>
-                  <p className="text-sm opacity-90 leading-relaxed">
+                  <p className="text-sm text-gray-700 opacity-90 leading-relaxed font-nunito">
                     {feature.description}
                   </p>
                 </div>
