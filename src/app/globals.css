@@ -11,12 +11,12 @@
 @theme {
   --font-cormorant-garamond: "Cormorant Garamond", serif;
   --font-montserrat-alternates: "Montserrat Alternates", serif;
-  --font-open-sans: "Open Sans", Arial;
+  --font-open-sans: "Open Sans";
   --font-archivo: "Archivo", Arial;
   --font-gotu: "Gotu", serif;
   --font-league-script: "League Script", Arial;
   --font-inter: "inter", Arial;
-  --font-nunito: "Nunito", "Arial";
+  --font-nunito: "Nunito";
 }
 
 @theme inline {
