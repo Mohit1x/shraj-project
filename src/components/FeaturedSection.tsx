@@ -65,7 +65,7 @@ export default function FeaturesSection() {
                   >
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-gray-700 opacity-90 leading-relaxed font-nunito">
+                  <p className="text-sm text-gray-700 opacity-90 leading-relaxed font-open-sans">
                     {feature.description}
                   </p>
                 </div>
