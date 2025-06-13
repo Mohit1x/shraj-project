@@ -43,7 +43,7 @@ export default function FeaturesSection() {
   }, []);
 
   return (
-    <div className="bg-white md:bg-[#2E2F91] py-8 md:py-12 px-4">
+    <div className="bg-white sm:bg-[#2E2F91] px-4">
       <div className="max-w-7xl mx-auto">
         {isMobile ? (
           <Swiper
@@ -55,17 +55,15 @@ export default function FeaturesSection() {
             className="text-white"
           >
             {features.map((feature, index) => (
-              <SwiperSlide key={index} className="bg-[#F8FAFC] p-10 rounded">
-                <div className="text-center rounded-xl">
+              <SwiperSlide key={index}>
+                <div className="bg-[#F8FAFC] rounded h-64 flex flex-col items-center justify-center p-6">
                   <div className="flex justify-center mb-4">
-                    <feature.icon size={48} className={`text-[#2E2F91]`} />
+                    <feature.icon size={48} className="text-[#2E2F91]" />
                   </div>
-                  <h3
-                    className={`text-[#2E2F91] font-sans text-xl font-semibold`}
-                  >
+                  <h3 className="text-[#2E2F91] font-sans text-xl font-semibold mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-gray-700 opacity-90 leading-relaxed font-sans">
+                  <p className="text-sm text-gray-700 opacity-90 leading-relaxed font-sans text-center max-w-[80%]">
                     {feature.description}
                   </p>
                 </div>
@@ -75,7 +73,10 @@ export default function FeaturesSection() {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="text-center text-white">
+              <div
+                key={index}
+                className="text-center text-white h-64 flex flex-col items-center justify-center"
+              >
                 <div className="flex justify-center mb-4">
                   <feature.icon size={48} className="text-[#d3686d]" />
                 </div>

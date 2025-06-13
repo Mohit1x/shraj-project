@@ -5,7 +5,7 @@ import { InfiniteSlider } from "./motion-primitives/infinite-slider";
 export default function ImageSlider() {
   return (
     <>
-      <div className="hidden md:block py-10">
+      <div className="hidden xl:block py-10">
         <div className="flex items-center justify-around">
           {carouselData.map((path) => (
             <div
@@ -27,7 +27,7 @@ export default function ImageSlider() {
       </div>
 
       <InfiniteSlider speedOnHover={20} gap={24} className="flex w-full">
-        <div className="block md:hidden">
+        <div className="block xl:hidden">
           <div className="flex items-center justify-around gap-5">
             {carouselData.map((path) => (
               <div

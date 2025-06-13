@@ -192,7 +192,14 @@ export default function About() {
         </div>
       </div>
 
-      <ImageSlider />
+      <section className="flex flex-col gap-8">
+        <h1 className="text-xl lg:text-4xl text-[#1C398E] leading-snug break-words font-semibold font-sans text-center">
+          Certifications & Affiliations
+        </h1>
+        <div className="w-full py-8 bg-[#E5E7EB]">
+          <ImageSlider />
+        </div>
+      </section>
     </div>
   );
 }
