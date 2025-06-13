@@ -23,14 +23,14 @@ export default function Home() {
 
       <div className="flex flex-col items-center justify-center gap-2 md:gap-5 text-center px-4">
         <div>
-          <h1 className="text-lg md:text-2xl lg:text-4xl text-blue-900 font-black font-nunito">
+          <h1 className="text-lg md:text-2xl lg:text-4xl text-blue-900 font-semibold font-sans">
             Different Types of Industrial Products,
           </h1>
-          <h1 className="text-lg md:text-2xl lg:text-4xl text-blue-900 font-black font-nunito">
+          <h1 className="text-lg md:text-2xl lg:text-4xl text-blue-900 font-semibold font-sans">
             Including Industrial Ovens
           </h1>
         </div>
-        <p className="text-xs md:text-md lg:text-lg text-slate-500 font-semibold font-nunito max-w-3xl">
+        <p className="text-xs md:text-md lg:text-lg text-slate-500 font-sans max-w-3xl">
           Explore a wide range of industrial products tailored for efficiency
           and performance, including high-quality industrial ovens designed for
           precision and durability.
@@ -43,7 +43,7 @@ export default function Home() {
 
       <div className="flex flex-col">
         <div className="mb-6 sm:mb-8 text-center">
-          <h2 className="text-lg sm:text-xl lg:text-4xl font-black text-[#1C398E] leading-snug break-words font-nunito">
+          <h2 className="text-xl lg:text-4xl text-[#1C398E] leading-snug break-words font-semibold font-sans">
             Our Products
           </h2>
         </div>
@@ -57,7 +57,7 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col gap-10">
-        <h1 className="text-lg sm:text-xl lg:text-4xl font-black text-[#1C398E] leading-snug break-words font-nunito text-center">
+        <h1 className="text-xl lg:text-4xl text-[#1C398E] leading-snug break-words font-semibold font-sans text-center">
           Certifications & Affiliations
         </h1>
         <div className="w-full py-10 bg-[#E5E7EB]">

@@ -35,7 +35,7 @@ export default function FeaturesSection() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 640); // Tailwind 'sm' breakpoint
+      setIsMobile(window.innerWidth < 640);
     };
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -61,11 +61,11 @@ export default function FeaturesSection() {
                     <feature.icon size={48} className={`text-[#2E2F91]`} />
                   </div>
                   <h3
-                    className={`text-[#2E2F91] font-nunito text-xl font-semibold`}
+                    className={`text-[#2E2F91] font-sans text-xl font-semibold`}
                   >
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-gray-700 opacity-90 leading-relaxed font-open-sans">
+                  <p className="text-sm text-gray-700 opacity-90 leading-relaxed font-sans">
                     {feature.description}
                   </p>
                 </div>
@@ -79,10 +79,10 @@ export default function FeaturesSection() {
                 <div className="flex justify-center mb-4">
                   <feature.icon size={48} className="text-[#d3686d]" />
                 </div>
-                <h3 className="text-lg font-bold mb-2 tracking-wide text-[#d3686d]">
+                <h3 className="text-lg mb-2 tracking-wide font-semibold font-sans text-[#d3686d]">
                   {feature.title}
                 </h3>
-                <p className="text-sm opacity-90 leading-relaxed w-[80%] mx-auto">
+                <p className="text-sm opacity-90 leading-relaxed font-semibold font-sans w-[80%] mx-auto">
                   {feature.description}
                 </p>
               </div>
