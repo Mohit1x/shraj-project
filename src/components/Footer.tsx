@@ -15,7 +15,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#DFE3E8] text-black py-20 px-4">
+    <footer className="bg-gray-100 text-black py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Main Footer Content */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-12 mb-8">

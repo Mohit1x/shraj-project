@@ -39,24 +39,26 @@ export default function Home() {
 
       <FeaturesSection />
 
-      <div className="flex flex-col gap-10">
-        <div className="bg-white mb-20">
+      <div className="flex flex-col">
+        <div className="mb-6 sm:mb-8 text-center">
+          <h2 className="text-lg sm:text-xl lg:text-4xl font-black text-[#1C398E] leading-snug break-words font-nunito">
+            Our Products
+          </h2>
+        </div>
+        <div className="bg-gray-200">
           <div
             className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8"
             ref={productsRef}
           >
-            <div className="mb-6 sm:mb-8">
-              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-black leading-snug break-words font-nunito">
-                Our Products
-              </h2>
-              <p className="text-sm text-gray-600 mt-2 max-w-md break-words">
-                Discover our range of high-quality industrial products.
-              </p>
-            </div>
             <Products />
           </div>
         </div>
-        <div className="w-full py-10">
+      </div>
+      <div className="flex flex-col gap-10">
+        <h1 className="text-lg sm:text-xl lg:text-4xl font-black text-[#1C398E] leading-snug break-words font-nunito text-center">
+          Certifications & Affiliations
+        </h1>
+        <div className="w-full py-10 bg-[#E5E7EB]">
           <ImageSlider />
         </div>
       </div>

@@ -1,11 +1,6 @@
 "use client";
 
-import {
-  FaTruck,
-  FaHeadset,
-  FaMoneyBillWave,
-  FaShoppingCart,
-} from "react-icons/fa";
+import { Gauge, ShieldCheck, SlidersHorizontal, Flame } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -17,38 +12,38 @@ export default function FeaturesSection() {
 
   const features = [
     {
-      icon: FaTruck,
-      title: "FREE SHIPPING",
-      description: "Free shipping on all order",
+      icon: Gauge,
+      title: "High-Performance Systems",
+      description: "Engineered for maximum efficiency and output.",
     },
     {
-      icon: FaHeadset,
-      title: "SUPPORT 24/7",
-      description: "Support 24 hours a day",
+      icon: ShieldCheck,
+      title: "Reliable Operations",
+      description: "Built to deliver consistent, fail-safe performance.",
     },
     {
-      icon: FaMoneyBillWave,
-      title: "MONEY RETURN",
-      description: "Back guarantee under 5 days",
+      icon: SlidersHorizontal,
+      title: "Customized Sterilization",
+      description: "Tailored solutions to meet your unique requirements.",
     },
     {
-      icon: FaShoppingCart,
-      title: "ORDER DISCOUNTS",
-      description: "One every order over $150",
+      icon: Flame,
+      title: "Preservation & Heating",
+      description: "Advanced solutions for precise preservation and heating.",
     },
   ];
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 640); // sm breakpoint in Tailwind
+      setIsMobile(window.innerWidth < 640); // Tailwind 'sm' breakpoint
     };
-    handleResize(); // initial check
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <div className="bg-[#2C318F] py-12 px-4">
+    <div className="bg-[#2E2F91] py-12 px-4">
       <div className="max-w-7xl mx-auto">
         {isMobile ? (
           <Swiper
@@ -85,7 +80,7 @@ export default function FeaturesSection() {
                 <h3 className="text-lg font-bold mb-2 tracking-wide text-[#d3686d]">
                   {feature.title}
                 </h3>
-                <p className="text-sm opacity-90 leading-relaxed">
+                <p className="text-sm opacity-90 leading-relaxed w-[80%] mx-auto">
                   {feature.description}
                 </p>
               </div>
