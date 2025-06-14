@@ -49,34 +49,20 @@ const ProductsSection = () => {
     return newProducts.slice(startIndex, startIndex + productsPerPage);
   };
 
-  return (
-    <section className="py-12 sm:py-16">
-      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header & Arrows */}
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-6 mb-6 sm:mb-8">
-          {newProducts && (
-            <div className="flex items-center gap-3 flex-shrink-0">
-              <button
-                onClick={scrollLeft}
-                className="w-9 h-9 rounded-full bg-white border border-gray-300 flex items-center justify-center hover:bg-gray-50 transition-colors"
-                aria-label="Previous products"
-              >
-                <ChevronLeft size={18} className="text-gray-600" />
-              </button>
-              <span className="text-sm text-gray-600 font-medium px-2">
-                {currentPage + 1} of {totalPages}
-              </span>
-              <button
-                onClick={scrollRight}
-                className="w-9 h-9 rounded-full bg-white border border-gray-300 flex items-center justify-center hover:bg-gray-50 transition-colors"
-                aria-label="Next products"
-              >
-                <ChevronRight size={18} className="text-gray-600" />
-              </button>
-            </div>
-          )}
-        </div>
+  const handlePageClick = (pageIndex: number) => {
+    setCurrentPage(pageIndex);
+  };
 
+  return (
+    <section className="py-2 sm:py-5 flex flex-col gap-10">
+      <div className="flex justify-end">
+        <Link href={"/all-products"}>
+          <p className="bg-[#1C398E] py-2 px-4 rounded-full w-fit text-right text-white font-semibold cursor-pointer">
+            View All
+          </p>
+        </Link>
+      </div>
+      <div className="max-w-7xl w-full mx-auto">
         <div
           className={`grid gap-4 sm:gap-6 ${
             screenSize === "mobile"
@@ -91,7 +77,7 @@ const ProductsSection = () => {
               <div className="bg-white rounded-2xl p-4 sm:p-6 hover:shadow-lg transition-shadow">
                 <div className="w-full h-32 sm:h-44 relative mb-4 bg-gray-50 rounded-xl overflow-hidden">
                   <Image
-                    src={item.image}
+                    src={item.image || "/placeholder.svg"}
                     alt={item.name}
                     fill
                     className="object-contain p-3 sm:p-4"
@@ -99,7 +85,7 @@ const ProductsSection = () => {
                   />
                 </div>
                 <div className="space-y-1 min-w-0">
-                  <div className="text-sm font-semibold text-gray-900 line-clamp-2 break-words">
+                  <div className="text-sm font-semibold text-gray-900 line-clamp-2 break-words truncate">
                     {item.name}
                   </div>
                   <div className="text-xs text-gray-600 truncate">
@@ -111,19 +97,46 @@ const ProductsSection = () => {
           ))}
         </div>
 
-        {/* Pagination Dots */}
-        <div className="flex justify-center mt-6 gap-2">
-          {Array.from({ length: totalPages }, (_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentPage(index)}
-              className={`w-2 h-2 rounded-full transition-colors ${
-                index === currentPage ? "bg-gray-600" : "bg-gray-300"
-              }`}
-              aria-label={`Go to page ${index + 1}`}
-            />
-          ))}
-        </div>
+        {/* Custom Pagination */}
+        {totalPages > 1 && (
+          <div className="flex justify-center mt-8">
+            <div className="flex items-center gap-3 flex-shrink-0">
+              <button
+                onClick={scrollLeft}
+                className="w-9 h-9 rounded-full bg-white border border-gray-300 flex items-center justify-center hover:bg-gray-50 transition-colors"
+                aria-label="Previous products"
+              >
+                <ChevronLeft size={18} className="text-gray-600" />
+              </button>
+
+              {/* Page Numbers */}
+              <div className="flex items-center gap-1">
+                {Array.from({ length: totalPages }, (_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => handlePageClick(index)}
+                    className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-colors ${
+                      index === currentPage
+                        ? "bg-gray-900 text-white"
+                        : "bg-white border border-gray-300 text-gray-600 hover:bg-gray-50"
+                    }`}
+                    aria-label={`Go to page ${index + 1}`}
+                  >
+                    {index + 1}
+                  </button>
+                ))}
+              </div>
+
+              <button
+                onClick={scrollRight}
+                className="w-9 h-9 rounded-full bg-white border border-gray-300 flex items-center justify-center hover:bg-gray-50 transition-colors"
+                aria-label="Next products"
+              >
+                <ChevronRight size={18} className="text-gray-600" />
+              </button>
+            </div>
+          </div>
+        )}
       </div>
 
       <style jsx>{`

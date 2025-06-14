@@ -41,7 +41,7 @@ export default function Home() {
       <section className="flex flex-col gap-15">
         <div className="text-center px-4 md:px-6 lg:px-8">
           <h2 className="text-2xl lg:text-4xl text-[#1C398E] leading-snug break-words font-bold font-sans">
-            Our Products
+            Some Of Our Products
           </h2>
         </div>
         <div className="bg-gray-200 py-8">
