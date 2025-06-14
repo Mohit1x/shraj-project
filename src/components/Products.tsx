@@ -12,7 +12,6 @@ const ProductsSection = () => {
     "desktop"
   );
 
-  // Detect screen size
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
@@ -25,7 +24,6 @@ const ProductsSection = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Slice products
   const newProducts =
     screenSize === "mobile"
       ? products.slice(2, 10)
@@ -33,7 +31,6 @@ const ProductsSection = () => {
       ? products.slice(2, 14)
       : products.slice(2, 18);
 
-  // Set products per page
   const productsPerPage =
     screenSize === "mobile" ? 2 : screenSize === "tablet" ? 4 : 8;
 
@@ -80,7 +77,6 @@ const ProductsSection = () => {
           )}
         </div>
 
-        {/* Product Grid */}
         <div
           className={`grid gap-4 sm:gap-6 ${
             screenSize === "mobile"
@@ -130,7 +126,6 @@ const ProductsSection = () => {
         </div>
       </div>
 
-      {/* Clamp styling */}
       <style jsx>{`
         .line-clamp-2 {
           display: -webkit-box;

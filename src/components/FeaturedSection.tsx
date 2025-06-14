@@ -1,37 +1,14 @@
 "use client";
 
-import { Gauge, ShieldCheck, SlidersHorizontal, Flame } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { useEffect, useState } from "react";
+import { features } from "@/constants/constant";
 
 export default function FeaturesSection() {
   const [isMobile, setIsMobile] = useState(false);
-
-  const features = [
-    {
-      icon: Gauge,
-      title: "High-Performance Systems",
-      description: "Engineered for maximum efficiency and output.",
-    },
-    {
-      icon: ShieldCheck,
-      title: "Reliable Operations",
-      description: "Built to deliver consistent, fail-safe performance.",
-    },
-    {
-      icon: SlidersHorizontal,
-      title: "Customized Sterilization",
-      description: "Tailored solutions to meet your unique requirements.",
-    },
-    {
-      icon: Flame,
-      title: "Preservation & Heating",
-      description: "Advanced solutions for precise preservation and heating.",
-    },
-  ];
 
   useEffect(() => {
     const handleResize = () => {

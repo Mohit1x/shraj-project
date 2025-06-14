@@ -10,29 +10,33 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div>
+    <div className="flex flex-col gap-10">
       <div className="bg-[#2C318F]">
         <div className="flex flex-col gap-10 max-w-7xl mx-auto text-white py-10 md:py-20 px-4 md:px-0">
           <div className="text-center flex flex-col gap-2">
-            <h1 className="text-lg text-slate-300">About Us</h1>
-            <h1 className="text-2xl md:text-5xl font-bold text-[#d3686d]">
+            <h1 className="text-slate-300 text-2xl md:text-5xl">About Us</h1>
+            <h1 className="text-lg md:text-xl font-bold text-[#d3686d]">
               CRAFTING EXCELLENCE, SHAPING TOMORROW
             </h1>
           </div>
-          <p className="text-slate-300 text-xs md:text-lg md:text-center text-start text-balance">
-            Established In 2016, Shraj Industries Private Limited Is A Leading
-            Manufacturer Of High-Quality Autoclaves & Sterilizers, Including
-            Vertical, Horizontal, Cylindrical, And Rectangular Autoclaves, Along
-            With Mortuary Freezers, Industrial Ovens, And Industrial Batch
-            Ovens. At Shraj Industries, We Are Committed To Delivering
-            Exceptional Quality Products That Meet And Exceed Customer
-            Expectations. Our Operations Are Driven By Integrity, Transparency,
-            And Ethical Business Practices, Ensuring Long-Term And Trusted
-            Relationships With Our Clients Worldwide. Our Continued Success And
-            Growth Are Made Possible Through The Visionary Leadership Of Mr.
-            Shravan Chauhan, Whose Guidance Has Been Instrumental In Driving Our
-            Innovation, Excellence, And Market Expansion.
-          </p>
+          <div className="px-4 max-w-[90ch] mx-auto">
+            <p className="text-slate-300 text-sm text-justify md:text-lg md:text-center md:text-balance">
+              Established In 2016, Shraj Industries Private Limited Is A Leading
+              Manufacturer Of High-Quality Autoclaves & Sterilizers, Including
+              Vertical, Horizontal, Cylindrical, And Rectangular Autoclaves,
+              Along With Mortuary Freezers, Industrial Ovens, And Industrial
+              Batch Ovens. At Shraj Industries, We Are Committed To Delivering
+              Exceptional Quality Products That Meet And Exceed Customer
+              Expectations. Our Operations Are Driven By Integrity,
+              Transparency, And Ethical Business Practices, Ensuring Long-Term
+              And Trusted Relationships With Our Clients Worldwide. Our
+              Continued Success And Growth Are Made Possible Through The
+              Visionary Leadership Of Mr. Shravan Chauhan, Whose Guidance Has
+              Been Instrumental In Driving Our Innovation, Excellence, And
+              Market Expansion.
+            </p>
+          </div>
+
           <div>
             {/* Desktop view (md and up) */}
             <div className="hidden lg:flex flex-col md:flex-row items-start md:items-center justify-between gap-5 mx-auto max-w-5xl">
@@ -63,34 +67,31 @@ export default function About() {
 
             {/* Mobile view only (below md) */}
             <div className="block lg:hidden px-4">
-              <Swiper
-                spaceBetween={20}
-                slidesPerView={1}
-                loop={true}
-                // pagination={{ clickable: true }}
-                autoplay={{ delay: 3000, disableOnInteraction: false }}
-                modules={[Autoplay]}
-              >
-                {featuresData.map((data, index) => (
-                  <SwiperSlide key={data.tag}>
-                    <div className="flex flex-col gap-2 items-center justify-center w-[80%] mx-auto">
-                      <div className="flex items-center gap-5">
+              {/* Mobile view only (below lg) */}
+              <div className="block lg:hidden px-4">
+                <Swiper
+                  spaceBetween={20}
+                  slidesPerView={1}
+                  loop={true}
+                  autoplay={{ delay: 3000, disableOnInteraction: false }}
+                  modules={[Autoplay]}
+                >
+                  {featuresData.map((data, index) => (
+                    <SwiperSlide key={data.tag}>
+                      <div className="flex flex-col items-center justify-center w-[250px] mx-auto text-center">
                         <data.icon
                           size={50}
-                          className="text-[#d3686d]"
+                          className="text-[#d3686d] mb-2"
                           strokeWidth={index == 0 || index === 3 ? 1 : 0}
                         />
-                        <h1 className="text-2xl text-slate-50 font-semibold w-[60%]">
+                        <h1 className="text-xl font-semibold text-slate-50">
                           {data.tag}
                         </h1>
                       </div>
-                      <p className="font-nunito text-md text-slate-100 text-balance">
-                        {data.desc}
-                      </p>
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
             </div>
           </div>
         </div>
@@ -128,7 +129,7 @@ export default function About() {
                     "Installation",
                   ].map((tool, idx) => (
                     <li key={idx} className="flex items-center">
-                      <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                      <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 flex-shrink-0"></span>
                       <span className="text-gray-700">{tool}</span>
                     </li>
                   ))}
@@ -137,7 +138,7 @@ export default function About() {
             },
             {
               title: "Why Us ?",
-              image: "/about-img-2.jpeg",
+              image: "/about-img-2.png",
               content: (
                 <>
                   <p className="text-gray-600 mb-4 font-medium">
@@ -153,7 +154,7 @@ export default function About() {
                       "Prompt Service",
                     ].map((point, idx) => (
                       <li key={idx} className="flex items-center">
-                        <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                        <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 flex-shrink-0"></span>
                         <span className="text-gray-700">{point}</span>
                       </li>
                     ))}
@@ -164,26 +165,24 @@ export default function About() {
           ].map((card, index) => (
             <div
               key={index}
-              className="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden"
+              className="flex flex-col md:flex-row bg-white shadow-lg rounded-lg overflow-hidden min-h-[400px] md:min-h-[350px]"
             >
               {/* Image */}
-              <div className="md:w-1/2 relative">
+              <div className="md:w-1/2 relative h-64 md:h-auto">
                 <Image
-                  src={card.image}
+                  src={card.image || "/placeholder.svg"}
                   alt={`about-img-${index}`}
-                  layout="responsive"
-                  width={600}
-                  height={400}
-                  className="object-cover h-full"
+                  fill
+                  className="object-cover"
                 />
               </div>
 
               {/* Text Box */}
-              <div className="mstatic top-4 md:top-auto right-4 md:right-auto md:w-1/2 bg-white rounded-lg p-6 shadow-md md:shadow-none md:rounded-none md:p-8 md:ml-[-40px] z-10">
+              <div className="md:w-1/2 bg-white rounded-lg p-6 shadow-md md:shadow-none md:rounded-none md:p-8 md:ml-[-40px] z-10 flex flex-col justify-center min-h-[300px] md:min-h-0">
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">
                   {card.title}
                 </h3>
-                <div className="text-gray-600 leading-relaxed">
+                <div className="text-gray-600 leading-relaxed flex-grow">
                   {card.content}
                 </div>
               </div>

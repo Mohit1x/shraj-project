@@ -2,6 +2,7 @@ import { CiBank } from "react-icons/ci";
 import { TbTruckDelivery } from "react-icons/tb";
 import { PiHeadset } from "react-icons/pi";
 import { HiOutlineShieldCheck } from "react-icons/hi";
+import { Gauge, ShieldCheck, SlidersHorizontal, Flame } from "lucide-react";
 
 export const navlinks = [
   { tag: "Home", path: "/" },
@@ -870,3 +871,25 @@ export const HomeSterilizers = [
   },
 ];
 
+export const features = [
+  {
+    icon: Gauge,
+    title: "High-Performance Systems",
+    description: "Engineered for maximum efficiency and output.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Reliable Operations",
+    description: "Built to deliver consistent, fail-safe performance.",
+  },
+  {
+    icon: SlidersHorizontal,
+    title: "Customized Sterilization",
+    description: "Tailored solutions to meet your unique requirements.",
+  },
+  {
+    icon: Flame,
+    title: "Preservation & Heating",
+    description: "Advanced solutions for precise preservation and heating.",
+  },
+];
