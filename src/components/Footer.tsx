@@ -20,7 +20,7 @@ export default function Footer() {
         {/* Main Footer Content */}
         <div className="flex flex-col gap-12 mb-8">
           {/* Mobile/Tablet: Logo Section */}
-          <div className="flex flex-col items-center lg:hidden">
+          <div className="flex flex-col items-start lg:hidden">
             <Image
               src="/logo.png"
               alt="logo"
@@ -29,14 +29,12 @@ export default function Footer() {
               className="object-contain mb-6"
             />
 
-            <h1 className="text-xs font-medium font-nunito text-gray-600">
-              <p className="text-xs text-center max-w-xs">
-                Shraj Industries Private Limited Is A Leading Manufacturer Of
-                High-Quality Autoclaves & Sterilizers, Including Vertical,
-                Horizontal, Cylindrical, And Rectangular Autoclaves, Along With
-                Mortuary Freezers, Industrial Ovens, And Industrial Batch Ovens.
-              </p>
-            </h1>
+            <p className="text-sm leading-relaxed text-gray-600 text-justify">
+              Shraj Industries Private Limited is a leading manufacturer of
+              high-quality autoclaves & sterilizers, including vertical,
+              horizontal, cylindrical, and rectangular autoclaves, along with
+              mortuary freezers, industrial ovens, and industrial batch ovens.
+            </p>
           </div>
 
           {/* Mobile/Tablet Layout: Links and Support side by side */}
@@ -55,17 +53,17 @@ export default function Footer() {
                     {nav.tag}
                   </Link>
                 ))}
-              </div>
-
-              {/* Column 2: Support */}
-              <div className="flex flex-col gap-3 flex-1">
-                <h3 className="font-semibold text-black mb-2">Support</h3>
                 <Link
                   href="/contact"
                   className="text-sm text-black hover:underline"
                 >
                   Contact
                 </Link>
+              </div>
+
+              {/* Column 2: Support */}
+              <div className="flex flex-col gap-3 flex-1 mr-2">
+                <h3 className="font-semibold text-black mb-2">Support</h3>
                 <div className="mt-2">
                   <div className="flex items-center gap-2 text-sm text-black mb-2">
                     <BsFillTelephoneFill size={14} />
@@ -189,7 +187,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Column 3: Social */}
             <div className="flex flex-col gap-3">
               <h3 className="font-semibold text-black mb-2">Social</h3>
               <div className="flex gap-3 mt-2">
@@ -226,12 +223,15 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Section */}
         <div className="border-t border-black pt-6">
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
-            <div className="flex gap-8 text-sm">
+          <div className="flex flex-col lg:flex-row justify-between items-start gap-4">
+            <div className="flex gap-8 text-sm text-[#2C3091] font-semibold">
               <span>Copyright © SHRAJ</span>
             </div>
+
+            <p className="text-[#2C3091] text-sm font-semibold">
+              Designed by :- A9 Business
+            </p>
 
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

@@ -38,14 +38,12 @@ export default function ProductsPage() {
 
   useEffect(() => {
     const needs: { [key: string]: boolean } = {};
-
     filteredProducts.forEach((product) => {
       const el = descRefs.current[product.id];
       if (el) {
-        needs[product.id] = el.scrollHeight > el.clientHeight + 2; // +2 buffer for rounding
+        needs[product.id] = el.scrollHeight > el.clientHeight + 2;
       }
     });
-
     setNeedsReadMore(needs);
   }, [filteredProducts]);
 
@@ -57,8 +55,10 @@ export default function ProductsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white py-10 w-full mx-auto px-4 md:px-10 xl:px-20 overflow-visible">
-      <h1 className="text-3xl font-bold mb-4">All Products</h1>
+    <div className="min-h-screen bg-white w-full mx-auto px-4 md:px-10 xl:px-20 overflow-visible">
+      <h1 className="text-3xl font-bold mb-4 font-serif text-[#2C3091]">
+        All Products
+      </h1>
       <div className="flex flex-col lg:flex-row gap-8 overflow-visible">
         {/* Desktop filter */}
         <div className="w-full hidden md:block lg:w-64 border-r pr-4">
@@ -111,9 +111,9 @@ export default function ProductsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredProducts.map((product) => (
               <Link href={`/all-products/${product.id}`} key={product.id}>
-                <div className="bg-white rounded-xl shadow hover:shadow-md transition p-6 flex flex-col h-[460px] overflow-visible">
+                <div className="bg-white rounded-xl shadow hover:shadow-md transition p-6 flex flex-col min-h-[340px] overflow-visible">
                   {/* Image */}
-                  <div className="relative w-full h-44 mb-4">
+                  <div className="relative w-full h-36 mb-4">
                     <Image
                       src={product.image || "/placeholder.svg"}
                       alt={product.name}

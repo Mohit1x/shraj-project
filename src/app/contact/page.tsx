@@ -12,35 +12,42 @@ export default function ContactPage() {
         {/* Left Side - Contact Info */}
         <div className="text-white md:p-10 md:w-1/2 flex flex-col justify-center">
           <h2 className="text-3xl font-semibold mb-4">Contact Us</h2>
-          <p className="mb-6 md:w-[70%]">
+
+          <p className="mb-6 w-full md:w-[85%] text-justify leading-relaxed">
             Not sure what you need? The team at <strong>Shraj</strong> will be
-            happy to listen to you and suggest event ideas you hadn’t considered
+            happy to listen to you and suggest event ideas you hadn’t
+            considered.
           </p>
 
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <span className="material-icons flex items-center gap-2">
-                <LiaAddressCardSolid size={20} />
-              </span>
-              <div className="flex flex-col gap-2 md:w-[50%]">
-                <p>
-                  Unit No.209, Sheetal Business Center, Chinchpada, Vasai East,
-                  Palghar, Maharashtra - 401028.
-                </p>
-              </div>
+          {/* Separator */}
+          <div className="w-full h-px bg-white/30 mb-6" />
+
+          <div className="space-y-6 px-4">
+            {/* Address */}
+            <div className="flex items-start gap-3">
+              <LiaAddressCardSolid size={24} className="min-w-[24px]" />
+              <p className="text-sm leading-relaxed">
+                Unit No.209, Sheetal Business Center,
+                <br />
+                Chinchpada, Vasai East, Palghar,
+                <br />
+                Maharashtra - 401028.
+              </p>
             </div>
-            <div className="flex items-center space-x-2">
-              <span className="material-icons flex items-center gap-2">
-                <MdEmail size={20} />
-              </span>
-              <div className="flex flex-col gap-2">
+
+            {/* Email */}
+            <div className="flex items-start gap-3">
+              <MdEmail size={24} className="min-w-[24px]" />
+              <div className="flex flex-col text-sm">
                 <span>sales1@shrajindustries.com</span>
                 <span>info@shrajindustries.com</span>
               </div>
             </div>
-            <div className="flex items-center space-x-2">
-              <BsFillTelephoneFill size={20} />
-              <div className="flex flex-col gap-2">
+
+            {/* Phone */}
+            <div className="flex items-start gap-3">
+              <BsFillTelephoneFill size={20} className="min-w-[20px]" />
+              <div className="flex flex-col text-sm">
                 <span>Support: +91 8956981462</span>
                 <span>Support: +91 8956981465</span>
               </div>
