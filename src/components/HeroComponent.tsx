@@ -12,7 +12,7 @@ export default function HeroComponent() {
   const mobileData = [
     {
       title: "INDUSTRIAL OVENS",
-      desc: "At Shraj Industries Pvt Ltd., we lead the way in industrial heating innovation. With 7 years of experience in oven manufacturing, our expertise has powered hundreds of successful operations across various industries.",
+      desc: "we lead the way in industrial heating innovation. With 7 years of experience in oven manufacturing, our expertise has powered hundreds of successful operations across various industries.",
       image: banners[0],
     },
     {
