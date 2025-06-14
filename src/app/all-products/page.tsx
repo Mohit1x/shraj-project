@@ -124,7 +124,7 @@ export default function ProductsPage() {
                   </div>
 
                   {/* Type */}
-                  <span className="bg-blue-900 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                  <span className="bg-blue-900 text-white text-xs font-semibold px-3 py-1 rounded-full w-fit">
                     {product.type}
                   </span>
 
