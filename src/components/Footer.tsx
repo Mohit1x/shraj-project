@@ -37,11 +37,8 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Mobile/Tablet Layout: Links and Support side by side */}
           <div className="flex lg:hidden">
-            {/* Links and Support - Side by side on mobile/tablet */}
             <div className="flex flex-row gap-8 sm:gap-12 w-full">
-              {/* Column 1: Links */}
               <div className="flex flex-col gap-3 flex-1">
                 <h3 className="font-semibold text-black mb-2">Links</h3>
                 {navlinks.map((nav) => (

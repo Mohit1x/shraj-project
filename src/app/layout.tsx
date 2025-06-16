@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SiWhatsapp } from "react-icons/si";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,14 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <a target="_blank">
+          <div className="fixed bottom-15 right-4 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg cursor-pointer hover:bg-green-600">
+            <SiWhatsapp className="text-2xl" />
+          </div>
+        </a>
       </body>
     </html>
   );
 }
+
+// href={"https://wa.me/917829712159"}
