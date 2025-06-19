@@ -55,10 +55,7 @@ export default function ProductsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white w-full mx-auto px-4 md:px-10 xl:px-20 overflow-visible">
-      <h1 className="text-3xl font-bold mb-4 font-serif text-[#2C3091]">
-        All Products
-      </h1>
+    <div className="min-h-screen bg-white w-full mx-auto px-4 md:px-10 xl:px-20 py-10 overflow-visible">
       <div className="flex flex-col lg:flex-row gap-8 overflow-visible">
         {/* Desktop filter */}
         <div className="w-full hidden md:block lg:w-64 border-r pr-4">
@@ -107,8 +104,11 @@ export default function ProductsPage() {
         )}
 
         {/* Product Grid */}
-        <ScrollArea className="w-full overflow-visible">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <ScrollArea className="w-full overflow-visible h-screen">
+          <h1 className="text-3xl font-bold mb-4 font-serif text-[#2C3091]">
+            All Products
+          </h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 m-10 mb:m-20">
             {filteredProducts.map((product) => (
               <Link href={`/all-products/${product.id}`} key={product.id}>
                 <div className="bg-white rounded-xl shadow hover:shadow-md transition p-6 flex flex-col min-h-[340px] overflow-visible">
