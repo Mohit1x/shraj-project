@@ -1,25 +1,23 @@
 "use client";
 
 import ImageSlider from "@/components/ImageSlider";
-import { featuresData } from "@/constants/constant";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { Autoplay } from "swiper/modules";
 import Image from "next/image";
+import AboutFeatureSection from "@/components/AboutFeatureSection";
 
 export default function About() {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col">
       <div className="bg-[#2C318F]">
-        <div className="flex flex-col gap-10 max-w-7xl mx-auto text-white py-10 md:py-20 px-4 md:px-0">
+        <div className="flex flex-col gap-10 max-w-7xl mx-auto text-white py-10 md:py-10 px-4 md:px-0">
           <div className="text-center flex flex-col gap-2">
             <h1 className="text-slate-300 text-2xl md:text-5xl">About Us</h1>
             <h1 className="text-lg md:text-xl font-bold text-[#d3686d]">
               CRAFTING EXCELLENCE, SHAPING TOMORROW
             </h1>
           </div>
-          <div className="px-4 max-w-[90ch] mx-auto">
+          <div className="px-2 max-w-[90ch] mx-auto">
             <p className="text-slate-300 text-sm text-justify md:text-lg md:text-center md:text-balance">
               Established In 2016, Shraj Industries Private Limited Is A Leading
               Manufacturer Of High-Quality Autoclaves & Sterilizers, Including
@@ -37,37 +35,25 @@ export default function About() {
             </p>
           </div>
 
-          <div>
-            {/* Desktop view (md and up) */}
-            <div className="hidden lg:flex flex-col md:flex-row items-start md:items-center justify-between gap-5 mx-auto max-w-5xl">
+          {/* <div>
+            <div className="hidden lg:flex flex-col md:flex-row items-start justify-center md:items-center gap-5 mx-auto max-w-5xl">
               {featuresData.map((data, index) => (
-                <div
-                  key={data.tag}
-                  className={`flex flex-col gap-2 ${
-                    index !== featuresData.length - 1 &&
-                    "border-none border-r-gray-600 md:border-r items-start"
-                  }`}
-                >
-                  <div className="flex items-start gap-5">
+                <div key={data.tag}>
+                  <div className="flex flex-col items-center justify-center w-[170px] mx-auto text-center">
                     <data.icon
                       size={50}
-                      className="text-[#d3686d]"
+                      className="text-[#d3686d] mb-2"
                       strokeWidth={index == 0 || index === 3 ? 1 : 0}
                     />
-                    <h1 className="text-2xl text-slate-50 font-semibold w-[60%]">
+                    <h1 className="text-xl font-semibold text-slate-50">
                       {data.tag}
                     </h1>
                   </div>
-                  <p className="font-nunito text-md text-start text-slate-100 text-balance">
-                    {data.desc}
-                  </p>
                 </div>
               ))}
             </div>
 
-            {/* Mobile view only (below md) */}
             <div className="block lg:hidden px-4">
-              {/* Mobile view only (below lg) */}
               <div className="block lg:hidden px-4">
                 <Swiper
                   spaceBetween={20}
@@ -93,7 +79,8 @@ export default function About() {
                 </Swiper>
               </div>
             </div>
-          </div>
+          </div> */}
+          <AboutFeatureSection />
         </div>
       </div>
       <div className="py-16 bg-gray-50">
@@ -124,9 +111,11 @@ export default function About() {
                 <ul className="space-y-2 mt-4">
                   {[
                     "With 7 years of experience in oven manufacturing",
-                    "high-quality products",
-                    "dedicated customer support",
+                    "High-quality products",
+                    "Dedicated customer support",
                     "Installation",
+                    "Custom oven design solutions tailored to client needs",
+                    "On-time delivery with consistent service reliability",
                   ].map((tool, idx) => (
                     <li key={idx} className="flex items-center">
                       <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 flex-shrink-0"></span>
@@ -191,7 +180,7 @@ export default function About() {
         </div>
       </div>
 
-      <section className="flex flex-col gap-8">
+      <section className="flex flex-col gap-8 mt-10">
         <h1 className="text-xl lg:text-4xl text-[#1C398E] leading-snug break-words font-semibold font-sans text-center">
           Certifications & Affiliations
         </h1>

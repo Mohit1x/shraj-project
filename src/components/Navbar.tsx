@@ -15,7 +15,7 @@ export default function Navbar() {
   const path = usePathname();
 
   return (
-    <div className="p-2 w-full">
+    <div className="p-2 w-full shadow-2xl">
       <div
         className={`flex items-center justify-between max-w-7xl mx-auto py-5`}
       >
