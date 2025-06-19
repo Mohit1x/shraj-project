@@ -1,10 +1,13 @@
 "use client";
 
+import type React from "react";
+
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { products } from "@/constants/constant";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import ProductCard from "@/components/ProductCard";
 
 // Custom hook to ensure component is mounted before accessing DOM
 function useHasMounted() {
@@ -13,88 +16,6 @@ function useHasMounted() {
     setMounted(true);
   }, []);
   return mounted;
-}
-
-// Custom hook for read more functionality
-function useReadMore(text: string, maxLength: number = 120) {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const displayText = useMemo(() => {
-    if (text.length <= maxLength) return text;
-    if (isExpanded) return text;
-    return text.substring(0, maxLength) + "...";
-  }, [text, maxLength, isExpanded]);
-
-  const needsReadMore = text.length > maxLength;
-
-  const toggle = useCallback(() => {
-    setIsExpanded((prev) => !prev);
-  }, []);
-
-  return {
-    displayText,
-    isExpanded,
-    needsReadMore,
-    toggle,
-  };
-}
-
-// Product Card Component for better organization
-function ProductCard({ product }: { product: any }) {
-  const { displayText, isExpanded, needsReadMore, toggle } = useReadMore(
-    product.description,
-    80
-  );
-
-  return (
-    <Link href={`/all-products/${product.id}`} key={product.id}>
-      <div className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 p-4 flex flex-col h-[320px] border border-gray-100 group">
-        {/* Image Container - Fixed Height */}
-        <div className="relative w-full h-32 mb-3 bg-gray-50 rounded-lg overflow-hidden flex-shrink-0">
-          <Image
-            src={product.image || "/placeholder.svg"}
-            alt={product.name}
-            fill
-            className="object-contain p-2 group-hover:scale-105 transition-transform duration-300"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            loading="lazy"
-          />
-        </div>
-
-        {/* Type Badge - Fixed Position */}
-        <div className="mb-2 flex-shrink-0">
-          <span className="bg-[#2C3091] text-white text-xs font-semibold px-2 py-1 rounded-full inline-block">
-            {product.type}
-          </span>
-        </div>
-
-        {/* Title - Fixed Height with Line Clamp */}
-        <h2 className="text-base font-semibold text-gray-900 mb-2 flex-shrink-0 h-10 flex items-start">
-          <span className="line-clamp-2 leading-tight">{product.name}</span>
-        </h2>
-
-        {/* Description - Flexible Content Area */}
-        <div className="text-sm text-gray-600 flex-1 flex flex-col">
-          <div className="flex-1">
-            <p className="leading-relaxed text-sm">{displayText}</p>
-          </div>
-
-          {needsReadMore && (
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                toggle();
-              }}
-              className="text-[#2C3091] hover:text-[#2E2F91] text-xs font-medium underline decoration-dotted underline-offset-2 hover:decoration-solid transition-all mt-1 self-start"
-            >
-              {isExpanded ? "Read less" : "Read more"}
-            </button>
-          )}
-        </div>
-      </div>
-    </Link>
-  );
 }
 
 export default function ProductsPage() {
