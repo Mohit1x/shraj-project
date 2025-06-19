@@ -13,9 +13,9 @@ export default function About() {
         <div className="flex flex-col gap-10 max-w-7xl mx-auto text-white py-10 md:py-10 px-4 md:px-0">
           <div className="text-center flex flex-col gap-2">
             <h1 className="text-slate-300 text-2xl md:text-5xl">About Us</h1>
-            <h1 className="text-[14px] md:text-xl font-bold text-[#d3686d]">
+            <p className="text-[18px] md:text-xl font-bold text-[#d3686d]">
               CRAFTING EXCELLENCE, SHAPING TOMORROW
-            </h1>
+            </p>
           </div>
           <div className="px-3 max-w-[90ch] mx-auto">
             <p className="text-slate-300 text-sm text-justify md:text-lg md:text-center md:text-balance">
