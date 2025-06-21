@@ -1,7 +1,7 @@
 "use client";
 
 import { navlinks } from "@/constants/constant";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import MobileSidebar from "./MobileSidebar";
 import Link from "next/link";
@@ -16,10 +16,8 @@ export default function Navbar() {
 
   return (
     <div className="w-full">
-      <div className="shadow-lg py-5 px-2 relative z-50">
-        <div
-          className={`flex items-center justify-between max-w-7xl mx-auto py-2`}
-        >
+      <div className="shadow-lg py-5 px-2 md:px-20 relative z-50">
+        <div className={`flex items-center justify-between mx-auto py-2`}>
           <Link href={"/"}>
             <div>
               <Image
@@ -51,6 +49,8 @@ export default function Navbar() {
             <Link href={"/contact"}>
               <Button variant={"hero"}>Contact Us</Button>
             </Link>
+            <div id="google_translate_element"></div>
+
             <div
               className="block md:hidden"
               onClick={() => setOpenMobileSidebar(true)}
