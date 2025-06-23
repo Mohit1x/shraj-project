@@ -49,6 +49,7 @@ export default function Navbar() {
             <Link href={"/contact"}>
               <Button variant={"hero"}>Contact Us</Button>
             </Link>
+            <div id="google_translate_element"></div>
 
             <div
               className="block md:hidden"
