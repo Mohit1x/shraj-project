@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <div className="w-full">
-      <div className="shadow-lg py-5 px-2 md:px-20 relative z-50">
+      <div className="py-5 relative max-w-7xl mx-auto">
         <div className={`flex items-center justify-between mx-auto py-2`}>
           <Link href={"/"}>
             <div>
@@ -49,7 +49,6 @@ export default function Navbar() {
             <Link href={"/contact"}>
               <Button variant={"hero"}>Contact Us</Button>
             </Link>
-            <div id="google_translate_element"></div>
 
             <div
               className="block md:hidden"
