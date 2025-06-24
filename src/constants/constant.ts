@@ -5,9 +5,12 @@ import { HiOutlineShieldCheck } from "react-icons/hi";
 import { Gauge, ShieldCheck, SlidersHorizontal, Flame } from "lucide-react";
 
 export const navlinks = [
-  { tag: "Home", path: "/" },
-  { tag: "About", path: "/about" },
-  { tag: "Products", path: "/all-products" },
+  { tag: "Home", path: "/", openProduct: true },
+  { tag: "About", path: "/about", openProduct: true },
+  { tag: "Products", path: "/all-products", openProduct: true },
+  { tag: "Enquiry", path: "/about", openProduct: true },
+  { tag: "FAQ", path: "/about", openProduct: true },
+  { tag: "contact", path: "/contact", openProduct: true },
 ];
 
 export const ovenMainFeatures = [

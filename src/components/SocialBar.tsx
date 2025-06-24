@@ -33,7 +33,7 @@ export default function SocialBar() {
             <span className="cursor-pointer hover:text-black">
               <FaXTwitter />
             </span>
-            <span className="cursor-pointer hover:text-[]">
+            <span className="cursor-pointer hover:text-[#D94164]">
               <FaInstagram />
             </span>
           </div>

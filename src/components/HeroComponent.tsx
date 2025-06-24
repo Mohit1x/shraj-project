@@ -41,12 +41,12 @@ export default function HeroComponent() {
             <Link href={"/all-products"}>
               <>
                 <div className="relative hidden md:block w-full aspect-[7/2]">
-                  <Image
+                  {/* <Image
                     src={src.image}
                     fill
                     alt={`hero-image-1`}
                     className="object-center"
-                  />
+                  /> */}
                 </div>
                 <div
                   className="relative md:hidden w-full aspect-[7/2] text-center text-white px-4 py-6 h-[150px]"
