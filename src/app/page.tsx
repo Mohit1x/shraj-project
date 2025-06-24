@@ -14,7 +14,9 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-15 md:gap-16 xl:gap-16">
-      <section className="w-full">{/* <HeroComponent /> */}</section>
+      <section className="w-full">
+        <HeroComponent />
+      </section>
 
       <section className="flex flex-col items-center justify-center gap-4 text-center px-4 md:px-6 lg:px-8">
         <div>

@@ -21,6 +21,8 @@ const buttonVariants = cva(
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
         link: "text-primary underline-offset-4 hover:underline",
         theme: "bg-[#2E2F91] p-2 text-white rounded w-fit cursor-pointer",
+        hoverTheme:
+          "bg-white p-2 text-black hover:bg-[#2E2F91] transition duration-300 hover:text-white rounded w-fit cursor-pointer",
         hero: "bg-[#2E2F91] px-4 py-2 text-white rounded-full hover:bg-purple-800 font-semibold cursor-pointer",
       },
       size: {

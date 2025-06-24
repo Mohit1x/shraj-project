@@ -5,7 +5,7 @@ import { FiPhone } from "react-icons/fi";
 
 export default function SocialBar() {
   return (
-    <div className="bg-gray-800 text-white py-5 w-full">
+    <div className="bg-[#1e2069] text-white py-5 w-full">
       {/* desktop */}
       <div className="w-full max-w-7xl mx-auto">
         <div className="flex items-center flex-wrap md:flex-nowrap justify-between gap-5 px-4 md:px-0">
