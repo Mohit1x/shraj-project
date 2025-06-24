@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -9,17 +9,26 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 
 export default function HeroComponent() {
-  const banners = ["/banner-1.png", "/banner-2.png", "/banner-3.png"];
-
   const mobileData = [
-    { names: ["BATCH OVENS", "CONVEYOR OVENS", "CABINET OVENS"], images: [""] },
+    {
+      names: ["BATCH OVENS", "CONVEYOR OVENS", "CABINET OVENS"],
+      images: [
+        "/BatchOvens/BatchOven1.png",
+        "/BatchOvens/BatchOven2.png",
+        "/BatchOvens/BatchOven3.png",
+      ],
+    },
     {
       names: [
         "VERTICAL AUTOCLAVE RADIAL AND KNOB LOCKING",
         "HORIZONTAL CYLINDRICLE HIGH PRESSURE AUTOCLAVE",
         "HORIZONTAL RECTANGULAR HIGH PRESSURE AUTOCLAVE",
       ],
-      images: [""],
+      images: [
+        "/MRS-pictures/MRS1.png",
+        "/MRS-pictures/MRS2.png",
+        "/MRS-pictures/MRS3.png",
+      ],
     },
     {
       names: [
@@ -27,7 +36,11 @@ export default function HeroComponent() {
         "TWO BODY MOBILE REFRIGERATOR",
         "THREE BODY REFRIGERATOR",
       ],
-      images: [""],
+      images: [
+        "/BatchOvens/BatchOven1.png",
+        "/BatchOvens/BatchOven2.png",
+        "/BatchOvens/BatchOven3.png",
+      ],
     },
   ];
 
@@ -66,21 +79,21 @@ export default function HeroComponent() {
                 <div className="flex items-center justify-center gap-4 h-full">
                   <div className="w-1/3 h-[70%]">
                     <img
-                      src="/BatchOvens/BatchOven1.png"
+                      src={data.images[0]}
                       alt="Industrial Equipment"
                       className="w-full h-full object-contain rounded-md drop-shadow-md"
                     />
                   </div>
                   <div className="w-1/3 h-[70%]">
                     <img
-                      src="/BatchOvens/BatchOven2.png"
+                      src={data.images[1]}
                       alt="Equipment"
                       className="w-full h-full object-contain rounded-md drop-shadow-md"
                     />
                   </div>
                   <div className="w-1/3 h-[70%]">
                     <img
-                      src="/BatchOvens/BatchOven3.png"
+                      src={data.images[2]}
                       alt="Equipment"
                       className="w-full h-full object-contain rounded-md drop-shadow-md"
                     />
