@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,11 +10,7 @@ export default function HeroComponent() {
   const mobileData = [
     {
       names: ["BATCH OVENS", "CONVEYOR OVENS", "CABINET OVENS"],
-      images: [
-        "/BatchOvens/BatchOven1.png",
-        "/BatchOvens/BatchOven2.png",
-        "/BatchOvens/BatchOven3.png",
-      ],
+      image: "/ovens-bg.jpg",
     },
     {
       names: [
@@ -23,19 +18,15 @@ export default function HeroComponent() {
         "CYLINDRICLE  AUTOCLAVE",
         "RECTANGULAR  AUTOCLAVE",
       ],
-      images: [
-        "/MRS-pictures/MRS1.png",
-        "/MRS-pictures/MRS2.png",
-        "/MRS-pictures/MRS3-1.png",
-      ],
+      image: "/sterilizer-bg.png",
     },
     {
       names: [
         "TWO BODY REFRIGERATOR",
-        "TWO BODY MOBILE REFRIGERATOR",
         "THREE BODY REFRIGERATOR",
+        "SIX BODY REFRIGERATOR",
       ],
-      images: ["/auto-1-1.png", "/auto-2.png", "/auto-3.png"],
+      image: "/mrs-bg.png",
     },
   ];
 
@@ -53,7 +44,7 @@ export default function HeroComponent() {
             <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-sky-400 to-sky-600 transform scale-x-100 transition-transform duration-300 group-hover:scale-x-110"></span>
             <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-sky-300 opacity-60"></span>
           </span>
-          <span className="ml-1 font-semibold tracking-wider">
+          <span className="ml-1 font-semibold tracking-wider text-white">
             {restOfText}
           </span>
         </h2>
@@ -78,7 +69,7 @@ export default function HeroComponent() {
           <SwiperSlide key={`${data.names[1]}-${index}`}>
             <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
               {/* Left side with enhanced styling */}
-              <div className="h-full flex items-center justify-center bg-gradient-to-br from-sky-50 via-sky-100 to-sky-200 p-3 sm:p-4 md:p-6 lg:p-8">
+              <div className="h-full flex items-center justify-center bg-gradient-to-br from-[#5155be] via-[#36387a] to-[#1a1b43] p-3 sm:p-4 md:p-6 lg:p-8">
                 <div className="flex flex-col gap-3 sm:gap-4 md:gap-6 max-w-2xl w-full">
                   <div className="space-y-2 sm:space-y-3 md:space-y-4">
                     {data.names.map((name, nameIndex) => (
@@ -112,60 +103,10 @@ export default function HeroComponent() {
               </div>
 
               {/* Right side - Complex Image Layout */}
-              <div className="h-full p-2 sm:p-3 md:p-4 bg-white/50 overflow-hidden">
-                {/* Mobile: Single image carousel */}
-                <div className="block lg:hidden h-full overflow-hidden">
-                  <Swiper
-                    modules={[Autoplay]}
-                    autoplay={{ delay: 2000, disableOnInteraction: false }}
-                    loop={true}
-                    className="w-full h-full"
-                  >
-                    {data.images.map((image, imgIndex) => (
-                      <SwiperSlide key={`mobile-${image}-${imgIndex}`}>
-                        <div className="w-full h-full flex items-center justify-center p-2">
-                          <img
-                            src={image || "/placeholder.svg"}
-                            alt={`Industrial Equipment ${imgIndex + 1}`}
-                            className="max-w-[90%] max-h-[90%] object-contain rounded-lg shadow-lg bg-white/90 p-2"
-                          />
-                        </div>
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
-                </div>
-
-                {/* Desktop: Complex grid layout */}
-                <div className="hidden lg:block h-full overflow-hidden">
-                  <div className="grid grid-cols-2 grid-rows-2 gap-2 h-full max-h-full">
-                    {/* Main large image - spans 2 rows */}
-                    <div className="row-span-2 group overflow-hidden">
-                      <img
-                        src={data.images[0] || "/placeholder.svg"}
-                        alt={`Industrial Equipment 1`}
-                        className="w-full h-full max-h-full object-contain rounded-lg shadow-md transition-all duration-300 group-hover:shadow-xl bg-white/90 p-2"
-                      />
-                    </div>
-
-                    {/* Two smaller images stacked */}
-                    <div className="group overflow-hidden">
-                      <img
-                        src={data.images[1] || "/placeholder.svg"}
-                        alt={`Industrial Equipment 2`}
-                        className="w-full h-full max-h-full object-contain rounded-lg shadow-md transition-all duration-300 group-hover:shadow-xl bg-white/90 p-1"
-                      />
-                    </div>
-
-                    <div className="group overflow-hidden">
-                      <img
-                        src={data.images[2] || "/placeholder.svg"}
-                        alt={`Industrial Equipment 3`}
-                        className="w-full h-full max-h-full object-contain rounded-lg shadow-md transition-all duration-300 group-hover:shadow-xl bg-white/90 p-1"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div
+                className="h-full p-2 sm:p-3 md:p-4 bg-white/50 overflow-hidden bg-cover bg-center"
+                style={{ backgroundImage: `url(${data.image})` }}
+              ></div>
             </div>
           </SwiperSlide>
         ))}
