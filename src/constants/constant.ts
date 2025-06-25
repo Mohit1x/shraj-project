@@ -8,7 +8,7 @@ export const navlinks = [
   { tag: "Home", path: "/", openProduct: true },
   { tag: "About", path: "/about", openProduct: true },
   { tag: "Products", path: "/all-products", openProduct: true },
-  { tag: "Enquiry", path: "/about", openProduct: true },
+  { tag: "Enquiry", path: "/enquiry", openProduct: true },
   { tag: "FAQ", path: "/about", openProduct: true },
   { tag: "contact", path: "/contact", openProduct: true },
 ];

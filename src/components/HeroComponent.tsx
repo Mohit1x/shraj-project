@@ -56,7 +56,7 @@ export default function HeroComponent() {
     <div className="w-full max-h-[50vh] h-[50vh] flex items-center justify-center bg-gradient-to-br from-slate-50 to-sky-50 overflow-hidden">
       <Swiper
         modules={[Autoplay, Pagination]}
-        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        autoplay={{ delay: 20000, disableOnInteraction: false }}
         pagination={{
           clickable: true,
           bulletClass: "swiper-pagination-bullet !bg-sky-500",
@@ -70,7 +70,7 @@ export default function HeroComponent() {
             <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
               {/* Left side with enhanced styling */}
               <div className="h-full flex items-center justify-center bg-gradient-to-br from-[#5155be] via-[#36387a] to-[#1a1b43] p-3 sm:p-4 md:p-6 lg:p-8">
-                <div className="flex flex-col gap-3 sm:gap-4 md:gap-6 max-w-2xl w-full">
+                <div className="flex flex-row items-center md:flex-col justify-center gap-3 sm:gap-4 md:gap-6 max-w-2xl w-full">
                   <div className="space-y-2 sm:space-y-3 md:space-y-4">
                     {data.names.map((name, nameIndex) => (
                       <div
@@ -88,13 +88,13 @@ export default function HeroComponent() {
                   <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 pt-2 sm:pt-4">
                     <Button
                       variant={"hoverTheme"}
-                      className="w-full sm:w-auto text-xs sm:text-sm font-semibold px-4 py-2 transition-all duration-300 hover:shadow-lg hover:scale-105"
+                      className="w-fit sm:w-auto text-xs sm:text-sm font-semibold px-4 py-2 transition-all duration-300 hover:shadow-lg hover:scale-105"
                     >
                       READ MORE
                     </Button>
                     <Button
                       variant={"theme"}
-                      className="w-full sm:w-auto text-xs sm:text-sm font-semibold px-4 py-2 transition-all duration-300 hover:shadow-lg hover:scale-105"
+                      className="w-fit sm:w-auto text-xs sm:text-sm font-semibold px-4 py-2 transition-all duration-300 hover:shadow-lg hover:scale-105"
                     >
                       GET QUOTE
                     </Button>

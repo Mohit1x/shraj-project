@@ -1,11 +1,18 @@
+"use client";
+
 import { CiMail } from "react-icons/ci";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiPhone } from "react-icons/fi";
+import MobileSidebar from "./MobileSidebar";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { useState } from "react";
 
 export default function SocialBar() {
+  const [openMobileSidebar, setOpenMobileSidebar] = useState(false);
+
   return (
-    <div className="bg-[#1e2069] text-white py-5 w-full">
+    <div className="bg-[#1e2069] text-white py-5 w-full flex">
       {/* desktop */}
       <div className="w-full max-w-7xl mx-auto">
         <div>
@@ -44,6 +51,16 @@ export default function SocialBar() {
           </div>
         </div>
       </div>
+      <div
+        className="block sm:hidden mr-2"
+        onClick={() => setOpenMobileSidebar(true)}
+      >
+        <RxHamburgerMenu size={20} color="white" />
+      </div>
+      <MobileSidebar
+        isSidebarOpen={openMobileSidebar}
+        setIsSidebarOpen={setOpenMobileSidebar}
+      />
     </div>
   );
 }

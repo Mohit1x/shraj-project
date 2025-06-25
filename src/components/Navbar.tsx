@@ -2,15 +2,12 @@
 
 import { navlinks } from "@/constants/constant";
 import { useState } from "react";
-import { RxHamburgerMenu } from "react-icons/rx";
-import MobileSidebar from "./MobileSidebar";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import ProductDropDown from "./productDropDown";
 
 export default function Navbar() {
-  const [openMobileSidebar, setOpenMobileSidebar] = useState(false);
   const [productOpen, setProductOpen] = useState(false);
 
   const path = usePathname();
@@ -44,7 +41,7 @@ export default function Navbar() {
               </p>
             </div>
           </div>
-          <div className="w-full h-[2px] bg-gray-600 my-4" />
+          <div className="w-full h-[2px] bg-gray-600 my-4 hidden md:block" />
 
           <div className="flex items-center gap-5 mx-auto">
             <div className="hidden sm:block">
@@ -96,17 +93,6 @@ export default function Navbar() {
                 )}
               </div>
             </div>
-
-            <div
-              className="block sm:hidden"
-              onClick={() => setOpenMobileSidebar(true)}
-            >
-              <RxHamburgerMenu size={20} color="black" />
-            </div>
-            <MobileSidebar
-              isSidebarOpen={openMobileSidebar}
-              setIsSidebarOpen={setOpenMobileSidebar}
-            />
           </div>
         </div>
       </div>
