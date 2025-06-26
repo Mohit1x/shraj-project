@@ -8,6 +8,7 @@ import {
   sterilizersProducts,
   mortuaryRSProducts,
 } from "@/constants/productLinks";
+import { FaAngleRight } from "react-icons/fa";
 
 const productData = [
   { label: "Industrial ovens", key: "ovens" },
@@ -43,7 +44,14 @@ const ProductDropDown = ({ isMobileSidebar }: ProductDropDownProps) => {
           onMouseLeave={() => setActiveCategory(null)}
           className="py-2 px-4 text-sm font-medium hover:bg-gray-100 cursor-pointer relative"
         >
-          {product.label}
+          <div className="flex items-center gap-2 group">
+            {product.label}{" "}
+            <FaAngleRight
+              className={`group-hover:rotate-90 ${
+                activeCategory === product.label ? "rotate-90" : ""
+              } absolute right-0 mr-2`}
+            />
+          </div>
 
           {/* Right-side submenu */}
           {activeCategory === product.key && (

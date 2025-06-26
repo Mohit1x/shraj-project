@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import ProductDropDown from "./productDropDown";
+import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 
 export default function Navbar() {
   const [productOpen, setProductOpen] = useState(false);
@@ -18,7 +19,7 @@ export default function Navbar() {
         <div className={`flex flex-col py-2`}>
           <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-4 md:gap-6 items-center w-full max-w-7xl mx-auto">
             <Link href="/">
-              <div className="w-full max-w-[200px] md:max-w-[280px] mx-auto md:mx-0">
+              <div className="w-full max-w-[200px] md:max-w-[200px] mx-auto md:mx-0">
                 <Image
                   src="/logo.png"
                   alt="SHRAJ-logo"
@@ -54,18 +55,25 @@ export default function Navbar() {
                       onMouseEnter={() => setProductOpen(true)}
                       onMouseLeave={() => setProductOpen(false)}
                     >
-                      <div>
+                      <div className="flex items-center gap-2 group">
                         <Link href={nav.path}>
                           <h1
                             className={`font-semibold cursor-pointer relative ${
                               path === nav.path
-                                ? "text-[#2E2F91] font-bold underline py-2"
+                                ? "text-[#2E2F91] font-bold py-2"
                                 : "text-black"
                             }`}
                           >
                             {nav.tag}
                           </h1>
                         </Link>
+                        {nav.openProduct ? (
+                          <FaAngleDown
+                            className={`${productOpen ? "rotate-180" : ""}`}
+                          />
+                        ) : (
+                          ""
+                        )}
                       </div>
 
                       {productOpen && (

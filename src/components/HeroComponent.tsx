@@ -53,7 +53,7 @@ export default function HeroComponent() {
   };
 
   return (
-    <div className="w-full max-h-[50vh] h-[50vh] flex items-center justify-center bg-gradient-to-br from-slate-50 to-sky-50 overflow-hidden">
+    <div className="w-full max-h-[55vh] h-[55vh] flex items-center justify-center bg-gradient-to-br from-slate-50 to-sky-50 overflow-hidden">
       <Swiper
         modules={[Autoplay, Pagination]}
         autoplay={{ delay: 20000, disableOnInteraction: false }}
@@ -104,7 +104,7 @@ export default function HeroComponent() {
 
               {/* Right side - Complex Image Layout */}
               <div
-                className="h-full p-2 sm:p-3 md:p-4 bg-white/50 overflow-hidden bg-cover bg-center"
+                className="bg-white/50 overflow-hidden bg-cover bg-center"
                 style={{ backgroundImage: `url(${data.image})` }}
               ></div>
             </div>
