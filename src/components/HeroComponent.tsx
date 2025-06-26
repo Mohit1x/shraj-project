@@ -5,6 +5,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function HeroComponent() {
   const mobileData = [
@@ -86,18 +87,22 @@ export default function HeroComponent() {
                   </div>
 
                   <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3 pt-2 sm:pt-4">
-                    <Button
-                      variant={"hoverTheme"}
-                      className="w-fit sm:w-auto text-xs sm:text-sm font-semibold px-4 py-2 transition-all duration-300 hover:shadow-lg hover:scale-105"
-                    >
-                      READ MORE
-                    </Button>
-                    <Button
-                      variant={"theme"}
-                      className="w-fit sm:w-auto text-xs sm:text-sm font-semibold px-4 py-2 transition-all duration-300 hover:shadow-lg hover:scale-105"
-                    >
-                      GET QUOTE
-                    </Button>
+                    <Link href={"/all-products"}>
+                      <Button
+                        variant={"hoverTheme"}
+                        className="w-fit sm:w-auto text-xs sm:text-sm font-semibold px-4 py-2 transition-all duration-300 hover:shadow-lg hover:scale-105"
+                      >
+                        READ MORE
+                      </Button>
+                    </Link>
+                    <Link href={"/enquiry"}>
+                      <Button
+                        variant={"theme"}
+                        className="w-fit sm:w-auto text-xs sm:text-sm font-semibold px-4 py-2 transition-all duration-300 hover:shadow-lg hover:scale-105"
+                      >
+                        GET QUOTE
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </div>
