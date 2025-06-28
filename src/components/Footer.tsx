@@ -227,7 +227,10 @@ export default function Footer() {
             </div>
 
             <p className="text-[#2C3091] text-sm font-semibold">
-              Designed by :- A9 Business
+              Designed by :-{" "}
+              <a href="https://a9business.in/" target="_blank">
+                A9 Business
+              </a>
             </p>
 
             <button

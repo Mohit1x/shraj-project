@@ -33,9 +33,7 @@ export default function EnquiryForm() {
     <div className="min-h-screen md:h-auto bg-gray-50 p-4 md:p-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Left Side - Company Information */}
           <div className="space-y-8">
-            {/* Office Address */}
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h2 className="text-xl font-bold text-gray-800 mb-4">
                 Office Address
