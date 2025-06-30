@@ -60,10 +60,25 @@ export default function SocialBar() {
         </div>
       </div>
       <div
-        className="block sm:hidden mr-2"
+        className="block sm:hidden mr-2 h-full"
         onClick={() => setOpenMobileSidebar(true)}
       >
-        <RxHamburgerMenu size={20} color="white" />
+        <div className="flex flex-col gap-10">
+          <RxHamburgerMenu size={20} color="white" />
+          <div className="md:hidden">
+            <div className="flex flex-col items-center gap-5">
+              <span className="cursor-pointer hover:text-[#0279DE]">
+                <FaFacebookF />
+              </span>
+              <span className="cursor-pointer hover:text-black">
+                <FaXTwitter />
+              </span>
+              <span className="cursor-pointer hover:text-[#D94164]">
+                <FaInstagram />
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
       <MobileSidebar
         isSidebarOpen={openMobileSidebar}
