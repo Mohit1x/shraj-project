@@ -18,7 +18,9 @@ export default function SocialBar() {
         <div>
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-5 px-4 md:px-0">
             <div className="h-10 w-[1px] bg-gray-700 hidden md:block" />
-            <h1 className="font-bold text-xl">Manufacturers & Exporter</h1>
+            <h1 className="font-bold text-xl font-nunito">
+              Manufacturers & Exporter
+            </h1>
             <div className="h-10 w-[1px] bg-gray-700 hidden md:block" />
             <h1 className="hover:text-[#9697d1] cursor-pointer flex items-center gap-2">
               <span>

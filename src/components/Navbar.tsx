@@ -32,13 +32,15 @@ export default function Navbar() {
 
             <div className="w-full flex justify-center md:justify-start">
               <p className="text-xs md:text-sm lg:text-base font-semibold text-gray-700 leading-relaxed text-center md:text-left px-4 md:px-0 max-w-full">
-                <strong className="text-[#2D2F91]">
+                <strong className="text-[#2D2F91] font-archivo">
                   Shraj Industries Private Limited
                 </strong>{" "}
-                Is A Leading Manufacturer Of High-Quality Autoclaves &
-                Sterilizers, Including Vertical, Horizontal, Cylindrical, And
-                Rectangular Autoclaves, Along With Mortuary Freezers, Industrial
-                Ovens, And Industrial Batch Ovens.
+                <span className="font-nunito">
+                  Is A Leading Manufacturer Of High-Quality Autoclaves &
+                  Sterilizers, Including Vertical, Horizontal, Cylindrical, And
+                  Rectangular Autoclaves, Along With Mortuary Freezers,
+                  Industrial Ovens, And Industrial Batch Ovens.
+                </span>
               </p>
             </div>
           </div>

@@ -39,10 +39,10 @@ export default function AboutFeatureSection() {
                   <div className="flex justify-center mb-4">
                     <feature.icon size={48} className="text-[#d3686d]" />
                   </div>
-                  <h3 className="text-lg mb-2 tracking-wide font-semibold font-sans text-[#d3686d]">
+                  <h3 className="text-lg mb-2 tracking-wide font-semibold font-nunito text-[#d3686d]">
                     {feature.title}
                   </h3>
-                  <p className="text-sm opacity-90 leading-relaxed font-semibold font-sans w-[70%] mx-auto">
+                  <p className="text-sm opacity-90 leading-relaxed font-semibold font-nunito w-[70%] mx-auto">
                     {feature.description}
                   </p>
                 </div>
@@ -59,10 +59,10 @@ export default function AboutFeatureSection() {
                 <div className="flex justify-center mb-4">
                   <feature.icon size={48} className="text-[#d3686d]" />
                 </div>
-                <h3 className="text-lg mb-2 tracking-wide font-semibold font-sans text-[#d3686d]">
+                <h3 className="text-lg mb-2 tracking-wide font-semibold font-nunito text-[#d3686d]">
                   {feature.title}
                 </h3>
-                <p className="text-sm opacity-90 leading-relaxed font-semibold font-sans w-[80%] mx-auto">
+                <p className="text-sm opacity-90 leading-relaxed font-semibold font-nunito w-[80%] mx-auto">
                   {feature.description}
                 </p>
               </div>

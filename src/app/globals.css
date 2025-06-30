@@ -8,7 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 @import "tailwindcss";
 
-/* @theme {
+@theme {
   --font-cormorant-garamond: "Cormorant Garamond", serif;
   --font-montserrat-alternates: "Montserrat Alternates", serif;
   --font-open-sans: "Open Sans";
@@ -17,7 +17,7 @@
   --font-league-script: "League Script", Arial;
   --font-inter: "inter", Arial;
   --font-nunito: "Nunito";
-} */
+}
 
 @theme inline {
   --color-background: var(--background);
