@@ -12,8 +12,10 @@ export default function About() {
       <div className="bg-[#2C318F]">
         <div className="flex flex-col gap-10 max-w-7xl mx-auto text-white py-10 md:py-10 px-4 md:px-0">
           <div className="text-center flex flex-col gap-2">
-            <h1 className="text-slate-300 text-2xl md:text-5xl">About Us</h1>
-            <p className="text-[18px] md:text-xl font-bold text-[#d3686d]">
+            <h1 className="text-slate-300 text-lg md:text-xl font-nunito">
+              About Us
+            </h1>
+            <p className="text-[24px] md:text-2xl font-bold text-[#d3686d]">
               CRAFTING EXCELLENCE, SHAPING TOMORROW
             </p>
           </div>
@@ -35,51 +37,6 @@ export default function About() {
             </p>
           </div>
 
-          {/* <div>
-            <div className="hidden lg:flex flex-col md:flex-row items-start justify-center md:items-center gap-5 mx-auto max-w-5xl">
-              {featuresData.map((data, index) => (
-                <div key={data.tag}>
-                  <div className="flex flex-col items-center justify-center w-[170px] mx-auto text-center">
-                    <data.icon
-                      size={50}
-                      className="text-[#d3686d] mb-2"
-                      strokeWidth={index == 0 || index === 3 ? 1 : 0}
-                    />
-                    <h1 className="text-xl font-semibold text-slate-50">
-                      {data.tag}
-                    </h1>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="block lg:hidden px-4">
-              <div className="block lg:hidden px-4">
-                <Swiper
-                  spaceBetween={20}
-                  slidesPerView={1}
-                  loop={true}
-                  autoplay={{ delay: 3000, disableOnInteraction: false }}
-                  modules={[Autoplay]}
-                >
-                  {featuresData.map((data, index) => (
-                    <SwiperSlide key={data.tag}>
-                      <div className="flex flex-col items-center justify-center w-[250px] mx-auto text-center">
-                        <data.icon
-                          size={50}
-                          className="text-[#d3686d] mb-2"
-                          strokeWidth={index == 0 || index === 3 ? 1 : 0}
-                        />
-                        <h1 className="text-xl font-semibold text-slate-50">
-                          {data.tag}
-                        </h1>
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
-              </div>
-            </div>
-          </div> */}
           <AboutFeatureSection />
         </div>
       </div>
@@ -181,9 +138,12 @@ export default function About() {
       </div>
 
       <section className="flex flex-col gap-8 mt-10">
-        <h1 className="text-xl lg:text-4xl text-[#1C398E] leading-snug break-words font-semibold font-sans text-center">
-          Certifications & Affiliations
-        </h1>
+        <div className="text-center px-4 md:px-6 lg:px-8">
+          <h2 className="text-2xl lg:text-4xl text-[#1C398E] leading-snug break-words font-bold font-nunito">
+            Certifications & Affiliations
+          </h2>
+          <div className="h-[5px] w-[30%] md:w-[10%] bg-[#1E2069] mx-auto" />
+        </div>
         <div className="w-full py-8 bg-[#E5E7EB]">
           <ImageSlider />
         </div>
