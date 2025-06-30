@@ -31,18 +31,15 @@ export default function MobileSidebar({
       {/* SIDEBAR */}
       <div
         className={clsx(
-          "fixed top-0 right-0 h-full w-[70%] bg-white shadow-lg transition-transform duration-600 z-50 flex flex-col gap-10",
+          "fixed top-0 right-0 h-full w-[50%] bg-white shadow-lg transition-transform duration-600 z-50 flex flex-col gap-10",
           isSidebarOpen ? "translate-x-0" : "translate-x-full"
         )}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex justify-end items-center p-4">
-          <button onClick={() => setIsSidebarOpen(false)}>
-            <X size={24} />
-          </button>
-        </div>
-
         <div className="flex flex-col flex-1 px-4 gap-10">
+          <div className="flex justify-end items-center p-4">
+            <button onClick={() => setIsSidebarOpen(false)}>close</button>
+          </div>
           <div className="flex flex-col gap-8">
             {navlinks.map((item) => (
               <div key={item.tag} className="flex flex-col">
