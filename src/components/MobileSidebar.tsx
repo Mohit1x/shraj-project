@@ -36,10 +36,13 @@ export default function MobileSidebar({
         )}
         onClick={(e) => e.stopPropagation()}
       >
+        <div className="flex justify-end items-center p-4">
+          <button onClick={() => setIsSidebarOpen(false)}>
+            <X size={24} color="black" />
+          </button>
+        </div>
+
         <div className="flex flex-col flex-1 px-4 gap-10">
-          <div className="flex justify-end items-center p-4">
-            <button onClick={() => setIsSidebarOpen(false)}>close</button>
-          </div>
           <div className="flex flex-col gap-8">
             {navlinks.map((item) => (
               <div key={item.tag} className="flex flex-col">
