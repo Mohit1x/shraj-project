@@ -29,12 +29,15 @@ export default function SocialBar() {
               +91 8956981462
             </h1>
             <div className="h-10 w-[1px] bg-gray-700 hidden md:block" />
-            <h1 className="hover:text-[#9697d1] cursor-pointer flex items-center gap-2">
+            <a
+              className="hover:text-[#9697d1] cursor-pointer flex items-center gap-2"
+              href="mailto:sales1@shrajindustries.com"
+            >
               <span>
                 <CiMail />
               </span>
               sales1@shrajindustries.com
-            </h1>
+            </a>
 
             <div className="h-10 w-[1px] bg-gray-700 hidden md:block" />
             <div className="hidden md:block">
