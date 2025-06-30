@@ -52,14 +52,14 @@ export default function EnquiryForm() {
                   <span className="font-medium">Email :</span>{" "}
                   <a
                     href="mailto:sales1@shrajindustries.com"
-                    className="text-red-500 hover:underline"
+                    className="text-blue-400 hover:underline"
                   >
                     sales1@shrajindustries.com
                   </a>
                   {" / "}
                   <a
                     href="mailto:info@shrajindustries.com"
-                    className="text-red-500 hover:underline"
+                    className="text-blue-400 hover:underline"
                   >
                     info@shrajindustries.com
                   </a>
@@ -70,7 +70,7 @@ export default function EnquiryForm() {
 
           {/* Right Side - Contact Form */}
           <div className="bg-white p-6 rounded-lg shadow-sm">
-            <h2 className="text-xl font-medium text-red-500 mb-6">
+            <h2 className="text-xl font-medium text-blue-400 mb-6">
               Please fill the below form with your query
             </h2>
 
@@ -161,7 +161,7 @@ export default function EnquiryForm() {
 
               <Button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition-colors"
+                className="w-full bg-blue-400 hover:bg-[#1E2069] text-white py-2 px-4 font-bold rounded-md transition-colors"
               >
                 Submit
               </Button>
