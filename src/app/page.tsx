@@ -43,7 +43,7 @@ export default function Home() {
           <h2 className="text-2xl lg:text-4xl text-[#1C398E] leading-snug break-words font-bold font-nunito">
             Our Products
           </h2>
-          <div className="h-[5px] w-[10%] bg-[#1E2069] mx-auto" />
+          <div className="h-[5px] w-[30%] md:w-[10%] bg-[#1E2069] mx-auto" />
         </div>
         <div className="bg-gray-200 py-8">
           <div
@@ -60,7 +60,7 @@ export default function Home() {
           <h2 className="text-2xl lg:text-4xl text-[#1C398E] leading-snug break-words font-bold font-nunito">
             Certifications & Affiliations
           </h2>
-          <div className="h-[5px] w-[10%] bg-[#1E2069] mx-auto" />
+          <div className="h-[5px] w-[30%] md:w-[10%] bg-[#1E2069] mx-auto" />
         </div>
         <div className="w-full py-8 bg-[#E5E7EB]">
           <ImageSlider />
