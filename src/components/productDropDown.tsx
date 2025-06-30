@@ -53,7 +53,6 @@ const ProductDropDown = ({ isMobileSidebar }: ProductDropDownProps) => {
             />
           </div>
 
-          {/* Right-side submenu */}
           {activeCategory === product.key && (
             <div
               className={`absolute left-full top-0 w-64 bg-white shadow-lg border rounded-md z-50 ${

@@ -19,7 +19,6 @@ export default function MobileSidebar({
 
   return (
     <>
-      {/* BACKDROP */}
       <div
         className={clsx(
           "fixed inset-0 bg-opacity-40 transition-opacity duration-300 z-20",
@@ -28,7 +27,6 @@ export default function MobileSidebar({
         onClick={() => setIsSidebarOpen(false)}
       />
 
-      {/* SIDEBAR */}
       <div
         className={clsx(
           "fixed top-0 right-0 h-full w-[50%] bg-white shadow-lg transition-transform duration-600 z-50 flex flex-col gap-10",

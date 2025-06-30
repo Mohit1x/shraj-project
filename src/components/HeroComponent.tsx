@@ -70,7 +70,6 @@ export default function HeroComponent() {
         {mobileData.map((data, index) => (
           <SwiperSlide key={`${data.names[1]}-${index}`}>
             <div className="grid grid-cols-1 lg:grid-cols-2 h-full min-h-[400px] sm:min-h-[450px] md:min-h-[500px] lg:min-h-[55vh] xl:min-h-[60vh]">
-              {/* Left side with enhanced styling */}
               <div className="h-full min-h-[250px] sm:min-h-[300px] lg:min-h-full flex items-center justify-center bg-gradient-to-br from-[#5155be] via-[#36387a] to-[#1a1b43] p-4 sm:p-6 md:p-8 lg:p-10">
                 <div className="flex flex-col justify-center items-center gap-4 sm:gap-6 md:gap-8 max-w-2xl w-full">
                   <div className="space-y-2 sm:space-y-3 md:space-y-4 text-start md:text-left">
@@ -107,7 +106,6 @@ export default function HeroComponent() {
                 </div>
               </div>
 
-              {/* Right side - Improved Image Layout */}
               <div className="relative h-full min-h-[200px] sm:min-h-[250px] lg:min-h-full bg-white/10 overflow-hidden">
                 <Image
                   src={data.image || "/placeholder.svg"}
@@ -117,7 +115,6 @@ export default function HeroComponent() {
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
                   priority={index === 0}
                 />
-                {/* Gradient overlay for better text readability if needed */}
                 <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/5 lg:to-transparent"></div>
               </div>
             </div>

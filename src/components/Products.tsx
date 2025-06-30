@@ -97,7 +97,6 @@ const ProductsSection = () => {
           ))}
         </div>
 
-        {/* Custom Pagination */}
         {totalPages > 1 && (
           <div className="flex justify-center mt-8">
             <div className="flex items-center gap-3 flex-shrink-0">
@@ -109,7 +108,6 @@ const ProductsSection = () => {
                 <ChevronLeft size={18} className="text-gray-600" />
               </button>
 
-              {/* Page Numbers */}
               <div className="flex items-center gap-1">
                 {Array.from({ length: totalPages }, (_, index) => (
                   <button

@@ -40,7 +40,6 @@ export function ProductImageZoom({ images }: ProductImageProps) {
 
   return (
     <div className="flex flex-col items-center w-full gap-10">
-      {/* Centered image box */}
       <div className="w-[90%] max-w-[450px] relative bg-white border shadow-md p-4 rounded-md">
         <div
           className="relative w-full aspect-[5/4] overflow-hidden"
@@ -79,7 +78,6 @@ export function ProductImageZoom({ images }: ProductImageProps) {
             />
           )}
 
-          {/* Navigation */}
           <Button
             variant="secondary"
             size="icon"
@@ -101,7 +99,6 @@ export function ProductImageZoom({ images }: ProductImageProps) {
         </div>
       </div>
 
-      {/* Thumbnails */}
       <div className="mt-4 w-[90%] max-w-[450px] flex justify-center gap-2 overflow-x-auto scrollbar-thin">
         {images.map((image, index) => (
           <div

@@ -80,7 +80,6 @@ export default function Navbar() {
 
                       {productOpen && (
                         <div className="absolute top-full left-0 mt-1">
-                          {/* Don't pass setShowDropdown anymore, hover is handled above */}
                           <ProductDropDown />
                         </div>
                       )}

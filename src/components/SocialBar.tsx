@@ -13,7 +13,6 @@ export default function SocialBar() {
 
   return (
     <div className="bg-[#1e2069] text-white py-5 w-full flex">
-      {/* desktop */}
       <div className="w-full max-w-7xl mx-auto">
         <div>
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-5 px-4 md:px-0">

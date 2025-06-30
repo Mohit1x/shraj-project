@@ -17,9 +17,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-100 text-black py-10 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Main Footer Content */}
         <div className="flex flex-col gap-12 mb-8">
-          {/* Mobile/Tablet: Logo Section */}
           <div className="flex flex-col items-start lg:hidden">
             <Image
               src="/logo.png"
@@ -58,7 +56,6 @@ export default function Footer() {
                 </Link>
               </div>
 
-              {/* Column 2: Support */}
               <div className="flex flex-col gap-3 flex-1 mr-2">
                 <h3 className="font-semibold text-black mb-2">Support</h3>
                 <div className="mt-2">
@@ -83,7 +80,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Mobile/Tablet: Social section (full width) */}
           <div className="flex flex-col gap-3 lg:hidden">
             <h3 className="font-semibold text-black mb-2">Social</h3>
             <div className="flex gap-3 mt-2">
@@ -118,9 +114,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Desktop Layout: All four sections in one row */}
           <div className="hidden lg:flex lg:flex-row lg:justify-between lg:items-start lg:w-full">
-            {/* Logo Section */}
             <div className="flex flex-col items-start">
               <Image
                 src="/logo.png"
@@ -141,7 +135,6 @@ export default function Footer() {
               </h1>
             </div>
 
-            {/* Column 1: Links */}
             <div className="flex flex-col gap-3">
               <h3 className="font-semibold text-black mb-2">Links</h3>
               {navlinks.map((nav) => (
@@ -155,7 +148,6 @@ export default function Footer() {
               ))}
             </div>
 
-            {/* Column 2: Support */}
             <div className="flex flex-col gap-3">
               <h3 className="font-semibold text-black mb-2">Support</h3>
               <div className="mt-2">

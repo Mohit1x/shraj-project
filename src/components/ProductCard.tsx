@@ -12,22 +12,18 @@ export default function ProductCard({ product }: { product: any }) {
     useEffect(() => {
       const checkOverflow = () => {
         if (measureRef.current && textRef.current) {
-          // Create a temporary element to measure single line height
           const tempElement = measureRef.current;
-          tempElement.textContent = "A"; // Single character to get line height
+          tempElement.textContent = "A";
           const singleLineHeight = tempElement.scrollHeight;
 
-          // Set the full text and measure
           tempElement.textContent = text;
           const fullTextHeight = tempElement.scrollHeight;
 
-          // Check if text spans more than one line (with some tolerance)
           setNeedsReadMore(fullTextHeight > singleLineHeight * 1.2);
         }
       };
 
       if (text) {
-        // Small delay to ensure DOM is ready
         const timer = setTimeout(checkOverflow, 10);
         return () => clearTimeout(timer);
       }
@@ -55,12 +51,10 @@ export default function ProductCard({ product }: { product: any }) {
         isExpanded ? "h-auto" : "h-[320px]"
       }`}
     >
-      {/* Link wrapper for navigation */}
       <Link
         href={`/all-products/${product.id}`}
         className="flex flex-col flex-1"
       >
-        {/* Image Container - Fixed Height */}
         <div className="relative w-full h-32 mb-3 bg-gray-50 rounded-lg overflow-hidden flex-shrink-0">
           <Image
             src={product.image || "/placeholder.svg"}
@@ -72,23 +66,19 @@ export default function ProductCard({ product }: { product: any }) {
           />
         </div>
 
-        {/* Type Badge - Fixed Position */}
         <div className="mb-2 flex-shrink-0">
           <span className="bg-[#2C3091] text-white text-xs font-semibold px-2 py-1 rounded-full inline-block">
             {product.type}
           </span>
         </div>
 
-        {/* Title - Fixed Height with Line Clamp */}
         <h2 className="text-base font-semibold text-gray-900 mb-2 flex-shrink-0 h-10 flex items-start">
           <span className="line-clamp-2 leading-tight">{product.name}</span>
         </h2>
       </Link>
 
-      {/* Description - Flexible Content Area with Proper Constraints */}
       <div className="text-sm text-gray-600 flex-1 flex flex-col">
         <div className="relative flex-1">
-          {/* Hidden element for measuring text height */}
           <p
             ref={measureRef}
             className="absolute invisible leading-relaxed text-sm whitespace-pre-wrap"
