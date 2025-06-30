@@ -54,7 +54,7 @@ export default function EnquiryForm() {
                     href="mailto:sales1@shrajindustries.com"
                     className="text-blue-400 hover:underline"
                   >
-                    sales1@shrajindustries.com
+                    sales@shrajindustries.com
                   </a>
                   {" / "}
                   <a

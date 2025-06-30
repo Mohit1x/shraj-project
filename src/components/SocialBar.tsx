@@ -36,7 +36,7 @@ export default function SocialBar() {
               <span>
                 <CiMail />
               </span>
-              sales1@shrajindustries.com
+              sales@shrajindustries.com
             </a>
 
             <div className="h-10 w-[1px] bg-gray-700 hidden md:block" />
