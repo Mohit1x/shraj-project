@@ -158,12 +158,6 @@ export default function Footer() {
             {/* Column 2: Support */}
             <div className="flex flex-col gap-3">
               <h3 className="font-semibold text-black mb-2">Support</h3>
-              <Link
-                href="/contact"
-                className="text-sm text-black hover:underline"
-              >
-                Contact
-              </Link>
               <div className="mt-2">
                 <div className="flex items-center gap-2 text-sm text-black mb-2">
                   <BsFillTelephoneFill size={14} />
