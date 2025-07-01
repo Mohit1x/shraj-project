@@ -125,12 +125,6 @@ export default function EnquiryForm() {
               </div>
 
               <div>
-                <Label htmlFor="country" className="text-gray-600">
-                  Country : <span className="text-red-500">*</span>
-                </Label>
-              </div>
-
-              <div>
                 <Label htmlFor="phone" className="text-gray-600">
                   Tel. No. / Mobile No. :{" "}
                   <span className="text-red-500">*</span>
