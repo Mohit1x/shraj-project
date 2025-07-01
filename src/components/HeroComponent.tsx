@@ -72,7 +72,11 @@ export default function HeroComponent() {
             <div className="grid grid-cols-1 lg:grid-cols-2 h-full min-h-[400px] sm:min-h-[450px] md:min-h-[500px] lg:min-h-[55vh] xl:min-h-[60vh]">
               <div className="h-full min-h-[250px] sm:min-h-[300px] lg:min-h-full flex items-center justify-center bg-gradient-to-br from-[#5155be] via-[#36387a] to-[#1a1b43] p-4 sm:p-6 md:p-8 lg:p-10">
                 <div className="flex flex-col justify-center items-center gap-4 sm:gap-6 md:gap-8 max-w-2xl w-full">
-                  <div className="space-y-2 sm:space-y-3 md:space-y-4 text-start md:text-left">
+                  <div
+                    className={`space-y-2 sm:space-y-3 md:space-y-4 text-start md:text-left ${
+                      index === 0 ? "mr-0 md:mr-[55px]" : ""
+                    }`}
+                  >
                     {data.names.map((name, nameIndex) => (
                       <div
                         key={`${name}-${nameIndex}`}
