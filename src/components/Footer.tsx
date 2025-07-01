@@ -69,7 +69,7 @@ export default function Footer() {
                   </div>
                   <div className="flex items-center gap-2 text-sm text-black">
                     <MdEmail size={14} />
-                    <span>sales1@shrajindustries.com</span>
+                    <span>sales@shrajindustries.com</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-black">
                     <MdEmail size={14} />
